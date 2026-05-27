@@ -16,7 +16,7 @@ Non vengo dal software. Vengo dall'officina.
 
 Ho saldato scarichi in titanio per le moto del MotoGP da SCProject. Ho programmato robot ESSEGI per linee di packaging industriale. Ho operato presse DATWLER e fatto QC su impianti di refrigerazione LU.VE. Ho costruito macchine con le mani per 15 anni prima di scrivere la prima riga di codice seria.
 
-Quando ho iniziato a costruire la mia fresatrice CNC da zero — 178 kg, 3 assi, ±0.019 mm — ho capito che avevo bisogno di un sistema per non perdere il filo. Da lì è nato TITANIUM_OS.
+Quando ho iniziato a costruire la mia fresatrice CNC da zero — 178 kg, struttura corpo unico in acciaio saldato TIG, 3 assi, ±0.019 mm — ho capito che avevo bisogno di un sistema per non perdere il filo. Da lì è nato TITANIUM_OS.
 
 Nessuna laurea. Solo proof-of-work reali.
 
@@ -29,59 +29,81 @@ Nessuna laurea. Solo proof-of-work reali.
 | 2008–2011 | Saldatura TIG titanio — scarichi MotoGP @ SCProject |
 | 2012–2014 | Programmazione robot ESSEGI — packaging industriale |
 | 2015–2023 | Operatore presse DATWLER · QC LU.VE refrigerazione · officina propria |
-| Gen 2024 | Inizio costruzione fresatrice CNC V32 da zero — primo pezzo in Alu 7075 |
 | Gen 2025 | TITANIUM_OS v1.0 — scaffolding Python + STATE.json + prime automazioni |
-| Ago 2025 | V32 Config G: basamento saldato TIG, asse X assemblato (guide+vite+servo) |
-| Feb 2026 | V32: 178 kg assemblati · HMI TP900 acquisito · 8 pezzi interfaccia lavorati |
-| Mar 2026 | TITANIUM_OS v2.1 — Dashboard React live, 28 automazioni, Content Engine base |
-| Mar 2026 | TITANIUM_OS v3.0 — NeuroMapView SVG immersiva (dark glow + spring animation) |
-| Mar 2026 | TITANIUM_OS v3.2 — NeuroOSLayout, StorieView podcast, SINAPSI, MATTEO map |
-| Mar 2026 | Content Engine live — 8 episodi auto-generati da STATE.json via Claude API |
+| Feb 2026 | V32: 178 kg assemblati · HMI TP900 Comfort acquisito · 8 bronzine lavorate |
+| Mar 2026 | TITANIUM_OS v2.1 → v3.2 — Dashboard React live, Content Engine, SINAPSI |
+| Mag 2026 | **V32 — decisione corpo unico** (abbandonato sistema a molle) |
+| Mag 2026 | **TITANIUM_OS v5.1** — MCP 5 tool · RAG 50+ chunk · Dashboard CommandBar |
+| Mag 2026 | **ASSOLUTO V7** — documento master unico (10 ATTI, ~50K parole) |
 
 ---
 
 ### Progetti attivi
 
-**🔩 V32 — Fresatrice CNC 3 assi**
-Costruzione da zero. Struttura in alluminio 7075, viti a ricircolo di sfere, servo Siemens. Stato: `Config G — 65%`. Target: ±0.019 mm. Obiettivo finale: lavorazione MIMS tiles in produzione.
+**V32 — Fresatrice CNC 3 assi**
+Struttura corpo unico 178 kg, tubolari acciaio S235 saldati TIG, viti a sfere SFU1605, servo Siemens, PLC S7-314C + HMI TP900 Comfort. Riempimento Epoxy Granite per smorzamento vibrazioni. Stato: `Config G — 65%`. Target: ±0.019 mm (IT6-IT7). Investimento: EUR 2.250 (100% componenti recupero).
 
-**🧠 TITANIUM_OS — Sistema operativo cognitivo personale**
-Dashboard React 19 + Vite + Tailwind v4. 34 automazioni Python + n8n. Mappe SVG drill-down immersive, Content Engine con auto-generazione episodi podcast da STATE.json, database SINAPSI strutturato per progetti. `v3.2 live`.
+**TITANIUM_OS — Sistema operativo cognitivo personale**
+Dashboard React + Vite + Zustand + TanStack Query. MCP Server (5 tool Claude Code integrati). ChromaDB RAG 50+ chunk (IT/EN multilingue). API Flask + n8n. CommandBar Ctrl+K. Content Engine v2 — 10 episodi core + dataset JSONL. `v5.1 live`.
 
-**🔌 MIMS — Connettori modulari fisici**
-Protocollo proprietario di connettori fisici modulari. Tile lavorabili su V32. Applicazione prevista: Fit Park 4.0 (area fitness con tornello MIMS proprietario). `Prototipo`.
+**MIMS — Micro-Industry Modular System**
+Sistema modulare industriale con tile 190×190 mm, piastrine 40×40 mm, 3 giunti proprietari (Eco-Snap 0-tool, Quick-Twist 0-tool, Tech-Bolt). 7 materiali dallo stesso standard geometrico. Blue ocean: prezzo da EUR 30, vs Bosch/Item EUR 150+. MOQ zero. `Design completo — attende V32`.
 
-**⚡ VULCAN — Pressa 20t + ricette polimeri**
-Pressa Vevor 20t + colonne guida DATWLER + ricette polimeri A/B/C target. Brevetto di processo in sviluppo. Moat competitivo per MIMS tiles. Sequenza: STRUTTURA → RICETTE → BREVETTO → MIMS TILE → FIT PARK. `R&D`.
+**VULCAN — Pressa VCM per tiles MIMS**
+Pressa 15 ton recupero industriale + Edwards RV3 vacuum + ROPEX termico. Processo VCM (Vacuum Compression Molding) proprietario — 18 step, 6 ricette polimeriche. Brevetto processo in pipeline. `Attende V32`.
 
-**🤖 EVA — AI assistant per Vita Natura**
-WhatsApp bot + Claude API per centro estetico (Boffalora sopra Ticino). Gestione appuntamenti, FAQ automatiche, follow-up clienti. `Beta`.
-
-**📡 SINAPSI — Memoria navigabile ecosistema**
-Documentazione strutturata dell'ecosistema: CV a layer, VULCAN, MIMS, EVA. Database per istruire LLM proprietario futuro. `WIP`.
+**EVA — AI assistant per Vita Natura**
+WhatsApp bot + Claude API per centro estetico (Boffalora sopra Ticino, MI). Gestione appuntamenti, FAQ automatiche, follow-up. `Setup API WhatsApp pending`.
 
 ---
 
-### TITANIUM_OS — Architettura v3.2
+### ASSOLUTO V7 — Documento Master
+
+Il documento tecnico completo dell'ecosistema Titanium Ventures — 10 ATTI unificati in file singolo. Fisico + Digitale + Economico + Strategico.
+
+📄 [`DOCS/ASSOLUTO/ASSOLUTO_V7.md`](DOCS/ASSOLUTO/ASSOLUTO_V7.md) — sorgente markdown  
+📕 [`DOCS/ASSOLUTO/ASSOLUTO_V7.pdf`](DOCS/ASSOLUTO/ASSOLUTO_V7.pdf) — layout industriale (cover navy/brass, tabelle, code blocks)
+
+```
+ATTO I   — Il Presente (inventario, CV, laboratorio)
+ATTO II  — L'Ecosistema (5 pilastri, 10 regole, modello economico)
+ATTO III — V32 (specs, corpo unico, Config G, PLC, Epoxy Granite, BOM)
+ATTO IV  — MIMS (geometria, 3 giunti, 7 materiali, analisi competitiva)
+ATTO V   — Materiali e Produzione (VULCAN, VCM 18 step, 6 ricette)
+ATTO VI  — GENESIS (MCP, RAG, Dashboard v5.1, EVA, Content Engine)
+ATTO VII — Economia e Verdetto (BEP, ROI, Verdetto 3 assi, timeline 2026-2030)
+ATTO VIII— Mercato (TAM EUR 4.2B, SAM EUR 180M, SOM Y3 EUR 350-550K, GTM)
+ATTO IX  — Proprietà Intellettuale (3 brevetti, 6 trade secrets, 4 marchi)
+ATTO X   — Media Strategy (Titanium Lab, 3 serie, 7 revenue stream)
+```
+
+---
+
+### TITANIUM_OS — Architettura v5.1
 
 ```
 TITANIUM_OS/
-├── DASHBOARD/                React 19 + Vite + Tailwind v4
-│   ├── NeuroMapView          Mappa SVG drill-down — dark glow + spring animation
-│   ├── NeuroOSLayout         Vista mappa: dot grid + pulse rings + drillZoom burst
-│   ├── CanvasLayout          Vista canvas draggabile per stato progetti
-│   ├── LayersView (SINAPSI)  Database layer strutturato per progetto
-│   └── StorieView            22 episodi podcast (14 manuali + 8 auto) + LLM dataset
-├── AUTOMATIONS/              34 automazioni (13 attive · 14 WIP · 7 Content Engine)
-│   └── core/                 state_updater · content_pipeline · social_distributor
+├── DASHBOARD/              React + Vite + Zustand + TanStack Query
+│   ├── CommandBar          Ctrl+K — navigazione rapida nodi
+│   ├── PillarProgress      5 pilastri live con % da STATE.json
+│   ├── StorieView          10 episodi core + dataset JSONL
+│   └── QuickActions        azioni frequenti 1-click
+├── MCP/                    titanium_mcp_server.py — 5 tool Claude Code
+│   ├── get_state           → BRAIN/STATE.json live
+│   ├── update_milestone    → aggiorna milestone/blockers
+│   ├── search_mente        → query RAG ChromaDB
+│   ├── get_daily_brief     → brief formattato
+│   └── list_content_ready  → episodi pronti produzione
+├── NODES/
+│   ├── MENTE_RAG/          ChromaDB + SentenceTransformer paraphrase-multilingual
+│   ├── MENTE_SCANNER/      818+ estrazioni automatiche da MENTE/
+│   └── MENTE_WATCHER/      fs watcher → /api/scan on change
+├── AUTOMATIONS/core/       daily_brief · state_updater · content_pipeline
+├── CONTENT_ENGINE/         Content Engine v2 — dual-pass haiku/sonnet
+│   └── scripts/            milestone_to_episode.py · state_watcher.py
 ├── BRAIN/
-│   ├── STATE.json            Stato live: milestone · WIP · focus · blockers
-│   └── KNOWLEDGE/            15 file contesto LLM (sistema · progetti · CV)
-├── CONTENT_ENGINE/           Pipeline auto-generazione episodi da milestone
-│   ├── scripts/              milestone_to_episode.py · state_watcher.py
-│   └── DATABASE/episodes/    .md frontmatter LLM-ready · auto-update storieData.ts
-├── MATTEO/                   Mappa SVG ecosistema personale (vanilla JS · drill-down)
-└── SINAPSI/                  Documentazione: CV · VULCAN · MIMS · EVA · Manifesti
+│   └── STATE.json          Stato live: milestone · pilastri · blockers · nodes
+└── DOCS/ASSOLUTO/          ASSOLUTO_V7.md + ASSOLUTO_V7.pdf
 ```
 
 ---
@@ -89,11 +111,11 @@ TITANIUM_OS/
 ### Stack
 
 ```
-Frontend    React 19 · TypeScript · Vite · Tailwind v4 · Lucide Icons · SVG custom
-Backend     Python 3.14 · Flask · SQLite · n8n · Claude API (Anthropic haiku-4-5)
+Frontend    React · TypeScript · Vite · Tailwind · Zustand · TanStack Query
+Backend     Python 3.11 · Flask · ChromaDB · SentenceTransformer · MCP
 AI          Claude claude-sonnet-4-6 (orchestrazione) · haiku-4-5 (content gen)
-Hardware    TIG/MIG titanio · Alluminio 7075 CNC · Siemens S7-314C · Saldatura
-Infra       Git · GitHub Actions · self-hosted Windows · Vite dev server
+Hardware    TIG/MIG titanio · Acciaio S235 CNC · Siemens S7-314C + TP900 Comfort
+Infra       Git · n8n · self-hosted Windows 10 · Vite dev server
 ```
 
 ---
@@ -101,30 +123,27 @@ Infra       Git · GitHub Actions · self-hosted Windows · Vite dev server
 ### Content Engine — come funziona
 
 ```
-STATE.json                     storieData.ts
-milestones.verified  →  milestone_to_episode.py  →  EP_AUTO_XXX.md  →  StorieView
-     ↑                         ↑                          ↓
- Aggiornato                Claude API               LLM training
- manualmente              haiku-4-5               dataset futuro
+STATE.json                      storieData.ts
+milestones.verified  →  milestone_to_episode.py  →  EP_XXX.md  →  StorieView
+     ↑                          ↑                         ↓
+ Aggiornato                 Claude API              LLM training
+ manualmente               haiku-4-5              dataset futuro
 ```
 
-Ogni milestone verificato in `STATE.json` diventa automaticamente un episodio podcast `.md` con frontmatter strutturato, pronto per:
-- Pubblicazione podcast (voce + testo)
-- Fine-tuning LLM proprietario
-- Archivio proof-of-work navigabile
+Ogni milestone verificato in `STATE.json` diventa automaticamente un episodio podcast `.md` con frontmatter strutturato, pronto per fine-tuning LLM e proof-of-work navigabile.
 
 ---
 
 ### Changelog TITANIUM_OS
 
 ```
-v3.2  Mar 2026  NeuroOSLayout immersivo · StorieView 22 episodi · MATTEO map · SINAPSI
-                Content Engine live: 8 episodi auto da STATE.json · Claude API integrata
-v3.0  Mar 2026  NeuroMapView v3: SVG drill-down · dark glow · spring stagger · drillZoom
-v2.1  Mar 2026  Dashboard React live · 28 automazioni · Content Engine base · n8n bridge
-v2.0  Feb 2026  FileBrowser · MdManager · LayersView · CanvasLayout · StorieView base
-v1.5  Feb 2026  API server Flask · state_updater.py · automazioni core · BRAIN/KNOWLEDGE
-v1.0  Gen 2025  Scaffolding Python · STATE.json · primo sistema di tracking cognitivo
+v5.1  Mag 2026  CommandBar Ctrl+K · storieData v2.0 · proxy fix · SINAPSI→MENTE 41 doc
+v5.0  Mag 2026  Zustand + TanStack Query · navigazione guidata · PillarProgress live
+v4.x  Apr 2026  MCP Server 5 tool · RAG ChromaDB 50+ chunk · API Server Flask
+v3.2  Mar 2026  NeuroOSLayout · StorieView 22 ep · MATTEO map · Content Engine live
+v3.0  Mar 2026  NeuroMapView SVG drill-down · dark glow · spring animation
+v2.1  Mar 2026  Dashboard React live · 28 automazioni · Content Engine base
+v1.0  Gen 2025  Scaffolding Python · STATE.json · tracking cognitivo iniziale
 ```
 
 ---
@@ -139,10 +158,11 @@ v1.0  Gen 2025  Scaffolding Python · STATE.json · primo sistema di tracking co
 
 ---
 
-[![TITANIUM_OS](https://img.shields.io/badge/TITANIUM__OS-v3.2-10b981?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![V32](https://img.shields.io/badge/V32_CNC-65%25-f59e0b?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![Episodes](https://img.shields.io/badge/Podcast-22_episodi-a855f7?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![VULCAN](https://img.shields.io/badge/VULCAN-R%26D-ef4444?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![MIMS](https://img.shields.io/badge/MIMS-Prototipo-8b5cf6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![EVA](https://img.shields.io/badge/EVA-Beta-3b82f6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![Stack](https://img.shields.io/badge/Stack-React_19_·_Python_·_Claude_API-0ea5e9?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![TITANIUM_OS](https://img.shields.io/badge/TITANIUM__OS-v5.1-10b981?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![V32](https://img.shields.io/badge/V32_CNC-65%25_Config_G-f59e0b?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![ASSOLUTO](https://img.shields.io/badge/ASSOLUTO-V7-1B3A5C?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS/blob/main/DOCS/ASSOLUTO/ASSOLUTO_V7.md)
+[![MCP](https://img.shields.io/badge/MCP-5_tool-6366f1?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![RAG](https://img.shields.io/badge/RAG-50%2B_chunk-8b5cf6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![MIMS](https://img.shields.io/badge/MIMS-Design_completo-C8943A?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![EVA](https://img.shields.io/badge/EVA-Pending_WhatsApp-3b82f6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![Stack](https://img.shields.io/badge/Stack-React_·_Python_·_Claude_API-0ea5e9?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
