@@ -35,6 +35,10 @@ Nessuna laurea. Solo proof-of-work reali.
 | Mag 2026 | **V32 — decisione corpo unico** (abbandonato sistema a molle) |
 | Mag 2026 | **TITANIUM_OS v5.1** — MCP 5 tool · RAG 50+ chunk · Dashboard CommandBar |
 | Mag 2026 | **ASSOLUTO V7** — documento master unico (10 ATTI, ~50K parole) |
+| Mag 2026 | **RAG v4.0 hybrid** — BM25 + ChromaDB + CrossEncoder reranker, incrementale |
+| Mag 2026 | **Research Agent v1.1** — 13 sorgenti (BASE, POLITesi, Unpaywall + preset ITA/MIMS) |
+| Mag 2026 | **Stop Hooks orchestratore** — 3 hook paralleli, RAG detached (4.7s vs 45s+) |
+| Mag 2026 | **Sistema Agenti** — 8 agenti validatori (TESLA, FORGE, AQUA, LEX, SIEMENS, THEMIS, ARIA, EVA) |
 
 ---
 
@@ -79,7 +83,7 @@ ATTO X   — Media Strategy (Titanium Lab, 3 serie, 7 revenue stream)
 
 ---
 
-### TITANIUM_OS — Architettura v5.1
+### TITANIUM_OS — Architettura v5.2
 
 ```
 TITANIUM_OS/
@@ -87,22 +91,30 @@ TITANIUM_OS/
 │   ├── CommandBar          Ctrl+K — navigazione rapida nodi
 │   ├── PillarProgress      5 pilastri live con % da STATE.json
 │   ├── StorieView          10 episodi core + dataset JSONL
-│   └── QuickActions        azioni frequenti 1-click
+│   └── MatteoSection       skill tree · interessi · principi · 2030
 ├── MCP/                    titanium_mcp_server.py — 5 tool Claude Code
 │   ├── get_state           → BRAIN/STATE.json live
 │   ├── update_milestone    → aggiorna milestone/blockers
-│   ├── search_mente        → query RAG ChromaDB
+│   ├── search_mente        → query RAG ChromaDB ibrido
 │   ├── get_daily_brief     → brief formattato
 │   └── list_content_ready  → episodi pronti produzione
 ├── NODES/
-│   ├── MENTE_RAG/          ChromaDB + SentenceTransformer paraphrase-multilingual
+│   ├── MENTE_RAG/          RAG v4.0 hybrid: BM25+ChromaDB+CrossEncoder reranker
+│   │                       2376+ chunk · paraphrase-multilingual · incrementale
 │   ├── MENTE_SCANNER/      818+ estrazioni automatiche da MENTE/
-│   └── MENTE_WATCHER/      fs watcher → /api/scan on change
-├── AUTOMATIONS/core/       daily_brief · state_updater · content_pipeline
-├── CONTENT_ENGINE/         Content Engine v2 — dual-pass haiku/sonnet
-│   └── scripts/            milestone_to_episode.py · state_watcher.py
+│   ├── MENTE_WATCHER/      fs watcher → /api/scan on change
+│   ├── RESEARCH_AGENT/     13 sorgenti: OpenAlex · arXiv · Semantic Scholar
+│   │                       BASE · POLITesi · Baidu · CNKI · Unpaywall + altro
+│   └── AGENTS/             8 agenti validatori: TESLA · FORGE · AQUA · LEX
+│                           SIEMENS · THEMIS · ARIA · EVA
+├── AUTOMATIONS/core/
+│   ├── stop_hooks.py       Orchestratore Stop hooks — parallelo, RAG detached
+│   ├── daily_brief.py      Brief giornaliero → DATA/daily_brief_last.md
+│   ├── generate_restart_prompt.py   RIAVVIO_SESSIONE.txt + CONTEXT_INJECT.md
+│   └── generate_functions_list.py   FUNZIONI_SISTEMA.txt auto-aggiornato
 ├── BRAIN/
-│   └── STATE.json          Stato live: milestone · pilastri · blockers · nodes
+│   ├── STATE.json          Stato live: milestone · pilastri · blockers · nodes
+│   └── CONTEXT_INJECT.md   Contesto auto-generato per apertura sessioni
 └── DOCS/ASSOLUTO/          ASSOLUTO_V7.md + ASSOLUTO_V7.pdf
 ```
 
@@ -137,9 +149,12 @@ Ogni milestone verificato in `STATE.json` diventa automaticamente un episodio po
 ### Changelog TITANIUM_OS
 
 ```
+v5.2  Mag 2026  RAG v4.0 hybrid BM25+CrossEncoder · Research Agent 13 sorgenti
+                Stop hooks orchestratore parallelo (4.7s) · 8 agenti validatori
+                BASE + POLITesi + Unpaywall · preset ITA/MIMS/brevetti
 v5.1  Mag 2026  CommandBar Ctrl+K · storieData v2.0 · proxy fix · SINAPSI→MENTE 41 doc
 v5.0  Mag 2026  Zustand + TanStack Query · navigazione guidata · PillarProgress live
-v4.x  Apr 2026  MCP Server 5 tool · RAG ChromaDB 50+ chunk · API Server Flask
+v4.x  Apr 2026  MCP Server 5 tool · RAG ChromaDB · API Server Flask
 v3.2  Mar 2026  NeuroOSLayout · StorieView 22 ep · MATTEO map · Content Engine live
 v3.0  Mar 2026  NeuroMapView SVG drill-down · dark glow · spring animation
 v2.1  Mar 2026  Dashboard React live · 28 automazioni · Content Engine base
@@ -158,11 +173,13 @@ v1.0  Gen 2025  Scaffolding Python · STATE.json · tracking cognitivo iniziale
 
 ---
 
-[![TITANIUM_OS](https://img.shields.io/badge/TITANIUM__OS-v5.1-10b981?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![TITANIUM_OS](https://img.shields.io/badge/TITANIUM__OS-v5.2-10b981?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![V32](https://img.shields.io/badge/V32_CNC-65%25_Config_G-f59e0b?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![ASSOLUTO](https://img.shields.io/badge/ASSOLUTO-V7-1B3A5C?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS/blob/main/DOCS/ASSOLUTO/ASSOLUTO_V7.md)
 [![MCP](https://img.shields.io/badge/MCP-5_tool-6366f1?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![RAG](https://img.shields.io/badge/RAG-50%2B_chunk-8b5cf6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![RAG](https://img.shields.io/badge/RAG-v4.0_hybrid-8b5cf6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![Research](https://img.shields.io/badge/Research-13_sorgenti-0891b2?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![Agenti](https://img.shields.io/badge/Agenti-8_validatori-7c3aed?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![MIMS](https://img.shields.io/badge/MIMS-Design_completo-C8943A?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![EVA](https://img.shields.io/badge/EVA-Pending_WhatsApp-3b82f6?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![Stack](https://img.shields.io/badge/Stack-React_·_Python_·_Claude_API-0ea5e9?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
