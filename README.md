@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v2.7.0 | Sessione #10 | 29 May 2026 17:24
+### Stato Live — v2.7.0 | Sessione #11 | 30 May 2026 09:50
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -59,14 +59,16 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- Audit sistema - bottleneck identificati e risolti (28 Mag 2026)
 - Content Engine S2 - 6 episodi narrativi + 5 MOMENTI intermezzo + 8 backfill (63 giorni recuperati) (29 Mag 2026)
 - Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)
 - Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)
 - Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)
+- Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)
 
 ### Episodi recenti
-
+- *ffmpeg 8.1.1 + SumatraPDF installati + profilo PS *
+- *START_LOGIN.bat v1.1 - auto-avvio ecosistema + Win*
+- *Dashboard Tela v4.1 - MatteoSection: skill tree, i*
 
 ---
 
