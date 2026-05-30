@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v2.8.0 | Sessione #12 | 30 May 2026 10:29
+### Stato Live — v2.8.0 | Sessione #15 | 30 May 2026
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -46,11 +46,11 @@ Nessuna laurea. Solo proof-of-work reali.
 
 | Nodo | Descrizione |
 |------|-------------|
-| `MCP Server` | 5 tool Claude — get_state, search_mente, update_milestone |
+| `MCP Server` | 8 tool Claude — get_state, search_mente, update_milestone, update_session_context |
 | `MENTE RAG v4.0` | ChromaDB hybrid BM25+semantic+CrossEncoder — 6000+ chunk |
 | `Story Agent` | Genera episodi narrativi dai commit git (02:07 ogni notte) |
 | `Research Agent` | Cerca paper su 13 sorgenti (arXiv, Semantic Scholar, GitHub...) |
-| `Computer Use` | Controllo desktop via Anthropic API — screenshot+click+tastiera |
+| `NEXUS Swarm` | Orchestratore agenti paralleli — ThreadPoolExecutor + RAG graph 114 nodi |
 | `Daily Brief` | Briefing quotidiano 07:30 |
 | `API Server` | Flask localhost:5001 — media, foto, agenti, RAG |
 | `Dashboard v7.0` | React+Vite — sidebar + AgentsView + dot grid |
@@ -58,17 +58,25 @@ Nessuna laurea. Solo proof-of-work reali.
 
 ---
 
-### Ultimi 5 milestone verificati
-- Content Engine S2 - 6 episodi narrativi + 5 MOMENTI intermezzo + 8 backfill (63 giorni recuperati) (29 Mag 2026)
-- Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook ogni sessione (29 Mag 2026)
-- Calendario notturno completo - StoryAgent 02:07 + DeepFreeze 03:00 + NightResearch 03:37 + NightPush 04:07 + DailyBrief 07:30 (29 Mag 2026)
-- Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid + API /api/agents (29 Mag 2026)
-- Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/, print ridotti da 342 a 131 (29 Mag 2026)
+### Open source tools
 
-### Episodi recenti
-- *ffmpeg 8.1.1 + SumatraPDF installati + profilo PS *
-- *START_LOGIN.bat v1.1 - auto-avvio ecosistema + Win*
-- *Dashboard Tela v4.1 - MatteoSection: skill tree, i*
+Parts of TITANIUM_OS extracted as standalone tools:
+
+| Tool | What it does |
+|------|-------------|
+| [`hybrid-rag`](https://github.com/Microindustry/hybrid-rag) | Local hybrid RAG: ChromaDB + BM25 + CrossEncoder reranker. No cloud. |
+| [`git-narrator`](https://github.com/Microindustry/git-narrator) | Turns git history into structured narrative episodes. Runs nightly. |
+| [`multi-source-research`](https://github.com/Microindustry/multi-source-research) | Search arXiv, Semantic Scholar, GitHub and 10 more sources in one command. |
+| [`claude-session-bridge`](https://github.com/Microindustry/claude-session-bridge) | Persistent context across Claude Code sessions via auto-generated resume file. |
+
+---
+
+### Ultimi 5 milestone verificati
+- NEXUS swarm orchestrator v1.0 + RAG graph-aware v5.0 (114 nodi, 218 archi) (30 Mag 2026)
+- Session continuity system — RIAVVIO_SESSIONE.txt + stop hook + MCP update_session_context (30 Mag 2026)
+- Dashboard v7.0 - sidebar verticale collassabile + AgentsView glassmorphism + dot grid (29 Mag 2026)
+- Story Agent v1.0 - generazione episodi automatica da git log, cron 02:07 + stop hook (29 Mag 2026)
+- Logging centralizzato - CORE/log.py + 34 file aggiornati, RotatingFileHandler DATA/logs/ (29 Mag 2026)
 
 ---
 
