@@ -28,12 +28,12 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v2.7.0 | Sessione #11 | 30 May 2026 10:29
+### Stato Live — v2.8.0 | Sessione #12 | 30 May 2026 10:29
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
 | **V32 CNC** (fresatrice 3 assi) | `██████░░░░ 65%` | In costruzione |
-| **GENESIS** (ecosistema AI) | `███████░░░ 78%` | Building |
+| **GENESIS** (ecosistema AI) | `████████░░ 83%` | Building |
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
