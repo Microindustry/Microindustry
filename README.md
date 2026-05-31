@@ -34,34 +34,96 @@ L'obiettivo non è impressionare. È produrre valore misurabile ogni giorno, con
 
 ---
 
-## La catena che produce valore
+## MIMS — il prodotto
 
-Ogni pezzo di questa catena è pensato per alimentare il prossimo:
+Il mercato delle strutture modulari industriali è un mercato da miliardi dominato da due soluzioni entrambe sbagliate.
 
 ```
-V32 CNC di precisione
-    │
-    │  La fresatrice di precisione produce i componenti fisici.
-    │  Costruita da zero. Costo: EUR 2.250. ROI anno 1: 322%.
-    ▼
-VULCAN — pressa 20t + ricette polimeri proprietarie
-    │
-    │  VULCAN stampa le tiles MIMS a caldo.
-    │  Le ricette polimeri sono il moat competitivo.
-    ▼
-MIMS — sistema modulare proprietario
-    │
-    │  Il mercato è dominato dall'alluminio estruso (Item, Bosch Rexroth, MayTec):
-    │  costoso, rigido, supply chain lunga, zero differenziazione.
-    │  MIMS è diverso: polimero composito, connettore fisico brevettato,
-    │  produzione locale on-demand. Chi entra nel sistema MIMS non ne esce.
-    ▼
-FIT PARK 4.0 — prima applicazione di mercato
-    │
-    │  Area fitness con strutture MIMS proprietarie + tornello connesso.
-    │  Il prodotto che mostra il sistema al mercato.
-    ▼
-TITANIUM_OS gestisce tutto in tempo reale
+POLO 1 — Alluminio estruso (T-Slot)          POLO 2 — Carpenteria saldata
+Item · Bosch Rexroth · MayTec                Officine conto terzi
+
+Modulare, ma flessibile sotto carico.        Rigida, ma irreversibile.
+Costoso per uso industriale intensivo.       Lead time 4–8 settimane.
+Zero lock-in sul sistema.                    Inaccessibile alla PMI e all'artigiano.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                          MIMS — lo spazio vuoto
+           Rigidità da saldatura + Reversibilità da bullone
+           "Lego per l'industria pesante"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+### Il principio LEGO — applicato all'industria pesante
+
+LEGO ha creato miliardi di valore con un'idea semplice: **un sistema di connessione standardizzato** che rende ogni pezzo compatibile con ogni altro pezzo, ora e in futuro. Puoi costruire qualsiasi cosa. Puoi smontare e ricostruire. Puoi comprare nuovi pezzi sapendo che funzioneranno con quelli che hai già.
+
+MIMS applica lo stesso principio alle strutture industriali fisiche:
+
+- **Un solo standard di connessione** — il DNA 29.9 mm, invariante per sempre
+- **Costruzione additiva** — aggiungi moduli senza sostituire la struttura esistente
+- **Riconfigurabilità infinita** — smonta, ricostruisci in forma diversa, i componenti restano intatti
+- **Ecosistema chiuso** — ogni struttura MIMS costruita è un asset che cresce di valore, non un costo fisso
+
+Il lock-in di LEGO non è la dipendenza — è la compatibilità. Chi ha MIMS vuole più MIMS perché funziona sempre meglio di qualsiasi alternativa esterna.
+
+### Il DNA — geometria unificata invariante
+
+Ogni componente MIMS condivide un'unica sezione trasversale: **29.9 mm (tolleranza H7/g6)**. Il connettore cambia, il DNA non cambia mai. Qualsiasi connettore prodotto oggi è retrocompatibile con qualsiasi struttura costruita in futuro.
+
+| Parametro | Valore |
+|-----------|--------|
+| Sezione croce | 29.9 mm |
+| Fit | H7/g6 — accoppiamento scorrevole preciso |
+| Foro passante | Ø 16 mm |
+| Principio | Stesso telaio, modulo variabile — come il settore automotive |
+
+**La geometria è volutamente primordiale.** La sezione da 29.9 mm non richiede tecnologia esclusiva per essere prodotta — un tornio, una fresatrice, un'estrusora. La semplicità è una scelta strategica: il valore di MIMS non sta nella difficoltà di produzione, sta nel **protocollo**, nel **brevetto Tech-Bolt**, nell'**ecosistema di connettori retrocompatibili**, nelle **ricette polimeri** sviluppate con VULCAN. La forma si può fare da zero in qualsiasi officina attrezzata. Il sistema che ci sta sopra non si copia.
+
+### Tre livelli — un solo ecosistema
+
+| Livello | Nome | Meccanismo | Materiale | Mercato |
+|---------|------|-----------|-----------|---------|
+| **1** | MIMS Light | Eco-Snap — split-collet elastica, smontaggio senza utensili | ABS / PA6 | Maker, scuole, allestitori leggeri |
+| **2** | MIMS Pro | Quick-Twist — quarter-turn, feedback aptico (CLACK), ibrido plastica-metallo | PA-GF30 + anima metallica | Artigiani, PMI, allestitori fiere |
+| **3** | MIMS Heavy | **Tech-Bolt** — serraggio interno a scomparsa, cartucce intercambiabili (fluidi/elettricità) | **Acciaio 42CrMo4 nitrurato + Ghisa GS 400-15** | Industria pesante, B2B, OEM |
+
+### Tech-Bolt "Presta e Blocca" — il moat
+
+Il connettore di livello 3 è brevettabile come **Modello di Utilità**. Caratteristiche chiave:
+
+- Serraggio interno a scomparsa — nessuna testa di vite esposta, superficie pulita
+- Cartucce intercambiabili — lo stesso nodo può trasportare fluidi o cavi elettrici
+- **Reversibilità assoluta** — chiave esagonale 4/5 mm, svita, sfila. Nessuna deformazione plastica, nessuna colla, nessun taglio. Il componente si riusa identico in qualsiasi configurazione futura
+- Materiali industriali — 42CrMo4 nitrurato per resistenza e durezza superficiale, GS 400-15 per smorzamento delle vibrazioni
+
+Chi entra nell'ecosistema MIMS non cerca alternative: ogni struttura esistente è un asset che si riconfigura, non un costo da sostituire.
+
+### La produzione — filiera chiusa
+
+```
+V32 CNC (precisione ±0.019 mm)
+    └── lavora i componenti metallici MIMS Heavy
+
+VULCAN (pressa 20t + ricette polimeri A/B/C)
+    └── stampa a caldo le tiles MIMS Light e Pro
+        └── le ricette polimeri sono il processo brevettabile — non si comprano
+
+Produzione locale on-demand.
+Nessuna supply chain esterna. Nessun MOQ. Lead time: ore, non settimane.
+```
+
+### Prima applicazione — Fit Park 4.0
+
+Area fitness con strutture MIMS Heavy + tornello connesso proprietario. Il prodotto che porta MIMS dal prototipo al mercato, con un cliente fisico e un caso d'uso documentabile.
+
+---
+
+## La catena completa
+
+```
+V32 CNC → VULCAN pressa → MIMS tiles → FIT PARK 4.0 → mercato
+                                  ↑
+                     TITANIUM_OS gestisce tutto in tempo reale
 ```
 
 ---
@@ -93,41 +155,6 @@ Il controllo Siemens non è una scelta di convenienza — è la stessa piattafor
 ### VULCAN — Pressa 20 t + ricette polimeri
 
 Pressa da 20 tonnellate con colonne guida di precisione. Produce le tiles MIMS per stampaggio a caldo. Le ricette polimeri (A/B/C) sono il moat competitivo: non si acquistano, si sviluppano e si brevettano come processo.
-
----
-
-### MIMS — Protocollo modulare industriale
-
-**Il gap di mercato:**
-```
-T-Slot / Alluminio estruso        MIMS               Carpenteria saldata
-(Item, Bosch Rexroth, MayTec)   ← QUI →             (su misura, conto terzi)
-
-modulare ma flessibile                                rigida ma irreversibile
-costo elevato per uso pesante                        inaccessibile alla PMI
-zero lock-in                                         lead time 4–8 settimane
-
-MIMS = rigidità da saldatura + reversibilità da bullone
-```
-
-**Geometria unificata (DNA):**
-
-| Parametro | Valore |
-|-----------|--------|
-| Sezione croce | 29.9 mm (fit H7/g6) |
-| Foro passante | Ø 16 mm |
-| Tolleranza | H7/g6 — accoppiamento scorrevole preciso |
-| Principio | Stesso DNA, connettore variabile — retrocompatibilità garantita |
-
-**Gerarchia connettori (3 livelli):**
-
-| Livello | Nome | Meccanismo | Materiale | Target |
-|---------|------|-----------|-----------|--------|
-| 1 | MIMS Light | Eco-Snap — split-collet elastica, zero utensili | ABS / PA6 | Maker, scuole |
-| 2 | MIMS Pro | Quick-Twist — quarter-turn con feedback aptico (CLACK) | PA-GF30 + anima metallica | Artigiani, allestitori |
-| 3 | MIMS Heavy | **Tech-Bolt** — serraggio interno a scomparsa, cartucce intercambiabili | **Acciaio 42CrMo4 nitrurato + Ghisa GS 400-15** | Industria pesante, B2B |
-
-**Tech-Bolt "Presta e Blocca"** — brevettabile come Modello di Utilità. Reversibilità assoluta: nessuna deformazione plastica, nessuna colla, nessun taglio. Il componente si riusa identico in qualsiasi configurazione futura.
 
 ---
 
@@ -223,7 +250,7 @@ La **MatteoSection** nella Dashboard TITANIUM_OS è un CV interattivo immersivo:
 | V32 — BEP | 61 ore lavorate = 1.4 mesi @ EUR 45/h |
 | V32 — ROI anno 1 | 322% |
 | MIMS competitor principale | Alluminio estruso standard (Item, Bosch Rexroth, MayTec) |
-| MIMS vantaggio | Polimero composito + Tech-Bolt brevettato + produzione locale |
+| MIMS vantaggio | Protocollo DNA + Tech-Bolt brevettato + filiera chiusa |
 | Episodi podcast generati | 36+ (in automatico dai commit) |
 | Documenti in RAG | 800+ |
 | Automazioni attive | 34+ |
@@ -268,9 +295,9 @@ Il capannone entro 2030 non è un obiettivo lavorativo. È un obiettivo di sovra
 ---
 
 [![TITANIUM_OS](https://img.shields.io/badge/TITANIUM__OS-v7.0-10b981?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
+[![MIMS](https://img.shields.io/badge/MIMS-DNA_29.9mm-f97316?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![V32](https://img.shields.io/badge/V32_CNC-65%25-f59e0b?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![Episodi](https://img.shields.io/badge/Podcast-36+_episodi-a855f7?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![Agenti](https://img.shields.io/badge/Agenti_AI-8_attivi-6366f1?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![RAG](https://img.shields.io/badge/RAG-v4.0_ibrido-0ea5e9?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
-[![ARGUS](https://img.shields.io/badge/ARGUS-v2.0_computer_use-ef4444?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
 [![Target](https://img.shields.io/badge/Capannone-2030-64748b?style=flat-square)](https://github.com/Microindustry/TITANIUM_OS)
