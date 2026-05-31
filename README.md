@@ -66,6 +66,71 @@ TITANIUM_OS gestisce tutto in tempo reale
 
 ---
 
+## La parte fisica — costruita con le stesse mani
+
+### V32 — Fresatrice CNC 3 assi di precisione
+
+Struttura a corpo unico: telaio traliccio saldato TIG in acciaio S235 (profilati 40×40×3 mm) con colonne portale 60×60 mm. Nessun sistema a molle — la rigidità strutturale è una scelta progettuale, non un compromesso.
+
+| Parametro | Valore |
+|-----------|--------|
+| Precisione RSS | ±0.019 mm (IT6-IT7) |
+| Corsa Z | ≥300 mm (guide vincolate) |
+| Dimensioni | h 905 mm · largh 800/900 mm |
+| Controllo | PLC Siemens S7-314C-2 PtP + HMI TP900 Comfort |
+| Asse X | Guide lineari + vite a ricircolo di sfere + servomotore |
+| Sensoristica | IFM VSE150 (vibrazioni 0–80 mm/s, 4–20 mA) + IFM VSA004 (accelerometro triassiale IEPE) |
+| IO-Link | Balluff BNI004L — master 8 porte |
+| Comunicazione | PROFINET + OPC-UA via CP343 Ethernet |
+| Investimento | EUR 2.250 |
+| BEP | 61 ore @ EUR 45/h = 1.4 mesi |
+| ROI anno 1 | 322% |
+
+Il controllo Siemens non è una scelta di convenienza — è la stessa piattaforma dell'industria manifatturiera reale, con lo stesso linguaggio di programmazione (LAD/FBD/SCL), lo stesso protocollo di comunicazione (PROFINET), la stessa logica di safety. V32 non è un banco di prova: è una macchina industriale con budget da artigiano.
+
+---
+
+### VULCAN — Pressa 20 t + ricette polimeri
+
+Pressa da 20 tonnellate con colonne guida di precisione. Produce le tiles MIMS per stampaggio a caldo. Le ricette polimeri (A/B/C) sono il moat competitivo: non si acquistano, si sviluppano e si brevettano come processo.
+
+---
+
+### MIMS — Protocollo modulare industriale
+
+**Il gap di mercato:**
+```
+T-Slot / Alluminio estruso        MIMS               Carpenteria saldata
+(Item, Bosch Rexroth, MayTec)   ← QUI →             (su misura, conto terzi)
+
+modulare ma flessibile                                rigida ma irreversibile
+costo elevato per uso pesante                        inaccessibile alla PMI
+zero lock-in                                         lead time 4–8 settimane
+
+MIMS = rigidità da saldatura + reversibilità da bullone
+```
+
+**Geometria unificata (DNA):**
+
+| Parametro | Valore |
+|-----------|--------|
+| Sezione croce | 29.9 mm (fit H7/g6) |
+| Foro passante | Ø 16 mm |
+| Tolleranza | H7/g6 — accoppiamento scorrevole preciso |
+| Principio | Stesso DNA, connettore variabile — retrocompatibilità garantita |
+
+**Gerarchia connettori (3 livelli):**
+
+| Livello | Nome | Meccanismo | Materiale | Target |
+|---------|------|-----------|-----------|--------|
+| 1 | MIMS Light | Eco-Snap — split-collet elastica, zero utensili | ABS / PA6 | Maker, scuole |
+| 2 | MIMS Pro | Quick-Twist — quarter-turn con feedback aptico (CLACK) | PA-GF30 + anima metallica | Artigiani, allestitori |
+| 3 | MIMS Heavy | **Tech-Bolt** — serraggio interno a scomparsa, cartucce intercambiabili | **Acciaio 42CrMo4 nitrurato + Ghisa GS 400-15** | Industria pesante, B2B |
+
+**Tech-Bolt "Presta e Blocca"** — brevettabile come Modello di Utilità. Reversibilità assoluta: nessuna deformazione plastica, nessuna colla, nessun taglio. Il componente si riusa identico in qualsiasi configurazione futura.
+
+---
+
 ## Il sistema che lavora mentre dormo
 
 Questa è la parte che più dimostra il concetto di Microindustry come entità operativa autonoma.
@@ -158,7 +223,7 @@ La **MatteoSection** nella Dashboard TITANIUM_OS è un CV interattivo immersivo:
 | V32 — BEP | 61 ore lavorate = 1.4 mesi @ EUR 45/h |
 | V32 — ROI anno 1 | 322% |
 | MIMS competitor principale | Alluminio estruso standard (Item, Bosch Rexroth, MayTec) |
-| MIMS vantaggio | Polimero composito + connettore brevettato + produzione locale |
+| MIMS vantaggio | Polimero composito + Tech-Bolt brevettato + produzione locale |
 | Episodi podcast generati | 36+ (in automatico dai commit) |
 | Documenti in RAG | 800+ |
 | Automazioni attive | 34+ |
@@ -172,7 +237,7 @@ La **MatteoSection** nella Dashboard TITANIUM_OS è un CV interattivo immersivo:
 ## Stack
 
 ```
-Fisico        TIG/MIG titanio · Alu 7075 CNC · Siemens S7+TP900 · Pressa VEVOR 20t
+Fisico        TIG/MIG titanio · Alu 7075 CNC · Siemens S7+TP900 · Pressa 20t
 AI            Claude Sonnet 4.6 (orchestrazione) · Haiku 4.5 (content gen)
               OmniParser + YOLO (ARGUS v2) · CrossEncoder/ms-marco (RAG rerank)
 Backend       Python 3.11 · Flask · ChromaDB · SentenceTransformer · MCP Anthropic
