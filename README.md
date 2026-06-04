@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #25 | 04 Jun 2026 05:18
+### Stato Live — v1.1.0 | Sessione #26 | 04 Jun 2026 23:48
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -67,10 +67,6 @@ Nessuna laurea. Solo proof-of-work reali.
 
 ### Episodi recenti
 - *Automazioni notturne portabili: _ti_paths.bat (res*
-- *Vista METODO sul sito — spiegazione chi/cosa/come *
-- *n8n self-hosted attivo (account locale, no cloud) *
-- *Firewall 5173 aperto + Tailscale loggato sul fisso*
-- *Sicurezza: token GitHub ruotato — auth git via gh *
 
 ---
 
