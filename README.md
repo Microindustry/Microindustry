@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #26 | 04 Jun 2026 23:48
+### Stato Live — v1.1.0 | Sessione #26 | 05 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -66,7 +66,7 @@ Nessuna laurea. Solo proof-of-work reali.
 - Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)
 
 ### Episodi recenti
-- *Automazioni notturne portabili: _ti_paths.bat (res*
+
 
 ---
 
