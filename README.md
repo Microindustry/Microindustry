@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #31 | 06 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #34 | 07 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione autonoma #31: P4a chat RAG + P4b leva locale + P1b cartella clinica viva + audit agenti P5 (tutto committato, build verde)
-**Prossimo step:** DECISIONI MATTEO: (1) installare Ollama + `ollama pull qwen2.5:7b-instruct-q4_K_M` per accendere leva locale · (2) restart api_server (SERVICES/restart_api.ps1) per endpoint live · (3) prune roster agenti (AGENTS_AUDIT.md: aqua/plc) · LAVORO: P1a AUTOMAZ a livelli+stato live · P1c livelli da progressi reali · P2 storia-avventura
+**Milestone attivo:** Sessione #32: P1a fatto (AUTOMAZ a stato reale+live) · leva locale Ollama/Qwen ACCESA (model_ready=true) · P2 binario AVVENTURA lanciato (bibbia del mondo + pilota EP_AV_00 'La Bambina e la Giuntura', stagione AV). Tutto committato, build verde.
+**Prossimo step:** P2: EP_AV_01..04 (bozza su Qwen/M3, rifinitura) · collegare Critiche=quest e MAPPA=mondo · P1c livelli da progressi reali · cablare MiniMax M3 nel toggle chat (serve key OpenRouter in _VAULT). ANOMALIA TI_NightAudit: RISOLTA (gira @03:52 OK).
 
 ---
 
@@ -59,11 +59,11 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- Firewall 5173 aperto + Tailscale loggato sul fisso (100.125.152.124) — dashboard via LAN e da remoto (03/06/2026)
 - n8n self-hosted attivo (account locale, no cloud) + pnpm installato; avvio al login operativo (03/06/2026)
 - Vista METODO sul sito — spiegazione chi/cosa/come del sistema, nata dalle domande di un dev esterno (03/06/2026)
 - Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)
 - Notturne ottimizzate + self-audit: RAG CANONE vs RICERCA (-448 chunk garbage purgati), gate rilevanza ricerca (--min-rel), topic puliti, night_audit.py su Sonnet genera cartella clinica automatica (DATA/audit), TI_NightAudit @03:52 (05/06/2026)
+- P1a il grosso: view AUTOMAZ riscritta con stato operativo reale (persistente/event/scheduled/on-demand/dormiente) + badge live da /api/watchdog/status e /api/tasks/notturne; ~14 file 'da creare' erano falsi (esistono su disco), 5 sottostimati event-driven corretti; anomalia TI_NightAudit risolta (gira @03:52 OK). Commit 5f148a7+b70b4e2, build verde (06/06/2026)
 
 ### Episodi recenti
 
