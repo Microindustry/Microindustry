@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #34 | 07 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #41 | 08 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #32: P1a fatto (AUTOMAZ a stato reale+live) · leva locale Ollama/Qwen ACCESA (model_ready=true) · P2 binario AVVENTURA lanciato (bibbia del mondo + pilota EP_AV_00 'La Bambina e la Giuntura', stagione AV). Tutto committato, build verde.
-**Prossimo step:** P2: EP_AV_01..04 (bozza su Qwen/M3, rifinitura) · collegare Critiche=quest e MAPPA=mondo · P1c livelli da progressi reali · cablare MiniMax M3 nel toggle chat (serve key OpenRouter in _VAULT). ANOMALIA TI_NightAudit: RISOLTA (gira @03:52 OK).
+**Milestone attivo:** Sessione #34: verifica totale + CLAUDE.md v4.1.0 (macchina fissa) + RAG→WIKI con Graphify in produzione (grafo del repo 5966 nodi, skill /graphify, query verificata, 100% locale) + AI News Watcher catturato (brief 30+ creator + scaffold tier). Tutto committato+pushato.
+**Prossimo step:** Graphify: grafo semantico BRAIN/ via skill + refresh automatico come nodo + valutarlo come backend vista RETE. Poi: watcher 48h (richiede chiavi API), automazione storie Nina, de-hardcodare script tools/ legacy. RAG→Wiki = candidato episodio Nina + milestone spettacolare GitHub.
 
 ---
 
@@ -59,11 +59,11 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- n8n self-hosted attivo (account locale, no cloud) + pnpm installato; avvio al login operativo (03/06/2026)
-- Vista METODO sul sito — spiegazione chi/cosa/come del sistema, nata dalle domande di un dev esterno (03/06/2026)
-- Automazioni notturne portabili: _ti_paths.bat (resolver TI_ROOT/PYTHON/GH no-hardcode), night_research/push/finetune + story_agent de-Getac, finetune GPU/fp16 + guard llamafactory, register_night_tasks.ps1 con auto-UAC (03/06/2026)
-- Notturne ottimizzate + self-audit: RAG CANONE vs RICERCA (-448 chunk garbage purgati), gate rilevanza ricerca (--min-rel), topic puliti, night_audit.py su Sonnet genera cartella clinica automatica (DATA/audit), TI_NightAudit @03:52 (05/06/2026)
-- P1a il grosso: view AUTOMAZ riscritta con stato operativo reale (persistente/event/scheduled/on-demand/dormiente) + badge live da /api/watchdog/status e /api/tasks/notturne; ~14 file 'da creare' erano falsi (esistono su disco), 5 sottostimati event-driven corretti; anomalia TI_NightAudit risolta (gira @03:52 OK). Commit 5f148a7+b70b4e2, build verde (06/06/2026)
+- Bussola↔CRITICHE: DA_FARE_FATTO.md (scaletta viva, letta a inizio sessione) collegata alla cartella clinica via night_audit→bussola_todos.json→ramo 'Bussola' in CRITICHE; skill 'salva' per chiusura sessione standardizzata (07/06/2026)
+- Percorso evolutivo Nina a canone (PERCORSO_EVOLUTIVO.md): curriculum a spirale + ripetizione spaziata + dual coding + sistema Pietre (rimandi) + 3 strati + arco macro 'storia dell'IA' (LLM→RAG→agenti, stile Simone Rizzo) ancorato al progetto reale; visione libro-IA per il bambino del 2024 predisposto ai ricavi (07/06/2026)
+- CLAUDE.md v4.1.0: allineato alla macchina fissa (struttura PIATTA C:\Users\teo\TITANIUM_OS, SETUP MACCHINA con path reali verificati, Getac→fisso/benen→teo) (07/06/2026)
+- RAG→WIKI — Graphify in produzione: knowledge graph del repo (515 file → 5966 nodi, 6317 archi, 696 community in 13.2s, 100% locale, MIT) + skill /graphify in Claude Code; query sul grafo verificata (zero token sprecati, niente re-read dei file). Salto 'Wiki' dell'arco macro. Estrattore MENTE deciso ibrido per sensibilità (07/06/2026)
+- AI News Watcher catturato: BRAIN/AI_NEWS_WATCHER_BRIEF.md (30+ creator + handle, logica tier 48h con rotazione) + scaffold DATA/ai_news_watcher_state.json (07/06/2026)
 
 ### Episodi recenti
 
