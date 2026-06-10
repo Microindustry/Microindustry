@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #41 | 09 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #44 | 10 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #34: verifica totale + CLAUDE.md v4.1.0 (macchina fissa) + RAG→WIKI con Graphify in produzione (grafo del repo 5966 nodi, skill /graphify, query verificata, 100% locale) + AI News Watcher catturato (brief 30+ creator + scaffold tier). Tutto committato+pushato.
-**Prossimo step:** Graphify: grafo semantico BRAIN/ via skill + refresh automatico come nodo + valutarlo come backend vista RETE. Poi: watcher 48h (richiede chiavi API), automazione storie Nina, de-hardcodare script tools/ legacy. RAG→Wiki = candidato episodio Nina + milestone spettacolare GitHub.
+**Milestone attivo:** Sessione #34: CLAUDE.md v4.1.0 + RAG→WIKI Graphify in produzione + AI News Watcher v1 keyless + UI anti-sovraccarico (Centro di Controllo, STORIE a fisarmonica) + RETE riparata e integrata col grafo Graphify (toggle Conoscenza/Sistema) + binario AVVENTURA: bozza Mappa multi-livello + vista 'Mappa dell'Avventura' + 3 episodi (EP_AV_00/01/02: Loop→Automazione→LLM). Tutto committato+pushato.
+**Prossimo step:** [Matteo al risveglio] Guardare: CONTROLLO, STORIE rifatta, RETE→toggle 'Sistema' (dopo restart API), CONTROLLO→Mappa dell'Avventura, e i 3 episodi di Nina. Poi decidere: rinomina nomi sidebar (⚠ collisione 'Bussola'), schedulare watcher 48h (UAC), incoerenza ⟡ pilota-vs-arco, scrivere EP_AV_03+ (RAG/Wiki/Agenti/Orchestrazione).
 
 ---
 
@@ -59,14 +59,15 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- Bussola↔CRITICHE: DA_FARE_FATTO.md (scaletta viva, letta a inizio sessione) collegata alla cartella clinica via night_audit→bussola_todos.json→ramo 'Bussola' in CRITICHE; skill 'salva' per chiusura sessione standardizzata (07/06/2026)
-- Percorso evolutivo Nina a canone (PERCORSO_EVOLUTIVO.md): curriculum a spirale + ripetizione spaziata + dual coding + sistema Pietre (rimandi) + 3 strati + arco macro 'storia dell'IA' (LLM→RAG→agenti, stile Simone Rizzo) ancorato al progetto reale; visione libro-IA per il bambino del 2024 predisposto ai ricavi (07/06/2026)
-- CLAUDE.md v4.1.0: allineato alla macchina fissa (struttura PIATTA C:\Users\teo\TITANIUM_OS, SETUP MACCHINA con path reali verificati, Getac→fisso/benen→teo) (07/06/2026)
-- RAG→WIKI — Graphify in produzione: knowledge graph del repo (515 file → 5966 nodi, 6317 archi, 696 community in 13.2s, 100% locale, MIT) + skill /graphify in Claude Code; query sul grafo verificata (zero token sprecati, niente re-read dei file). Salto 'Wiki' dell'arco macro. Estrattore MENTE deciso ibrido per sensibilità (07/06/2026)
 - AI News Watcher catturato: BRAIN/AI_NEWS_WATCHER_BRIEF.md (30+ creator + handle, logica tier 48h con rotazione) + scaffold DATA/ai_news_watcher_state.json (07/06/2026)
+- AI News Watcher v1 KEYLESS costruito+testato: NODES/AI_NEWS_WATCHER/watcher.py + launcher night_ai_watch.bat; 4 sorgenti (GitHub via gh, siti RSS, YouTube RSS) zero chiavi, tier+rotazione, 67+30 segnali reali (07/06/2026)
+- UI anti-sovraccarico: vista CONTROLLO (Centro di Controllo: ogni strumento cosa fa/come si usa/se acceso) + STORIE v3.0 a fisarmonica; skill salva +memoria/+grafo; apertura→CONTROLLO (07/06/2026)
+- RETE riparata + integrata Graphify: era rotta (doppio api_server, indice stale); toggle sorgente Conoscenza(RAG)/Sistema(Graphify), nuovo endpoint /api/graph/graphify (stessa forma → motore 3D invariato), endpoint RAG blindato (07/06/2026)
+- Binario AVVENTURA esteso: bozza MAPPA_AVVENTURA.md multi-livello (Mondo→7 Regioni dell'arco IA→semi tecnici→Pietre) + vista navigabile 'Mappa dell'Avventura' (AvventuraMapView) + 3 episodi definitivi EP_AV_00/01/02 (Loop→Automazione→LLM), build verde (09/06/2026)
 
 ### Episodi recenti
-
+- *La Mente che Parla*
+- *L'Incantesimo che si Ripete*
 
 ---
 
