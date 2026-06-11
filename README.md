@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #44 | 10 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #46 | 11 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #34: CLAUDE.md v4.1.0 + RAG→WIKI Graphify in produzione + AI News Watcher v1 keyless + UI anti-sovraccarico (Centro di Controllo, STORIE a fisarmonica) + RETE riparata e integrata col grafo Graphify (toggle Conoscenza/Sistema) + binario AVVENTURA: bozza Mappa multi-livello + vista 'Mappa dell'Avventura' + 3 episodi (EP_AV_00/01/02: Loop→Automazione→LLM). Tutto committato+pushato.
-**Prossimo step:** [Matteo al risveglio] Guardare: CONTROLLO, STORIE rifatta, RETE→toggle 'Sistema' (dopo restart API), CONTROLLO→Mappa dell'Avventura, e i 3 episodi di Nina. Poi decidere: rinomina nomi sidebar (⚠ collisione 'Bussola'), schedulare watcher 48h (UAC), incoerenza ⟡ pilota-vs-arco, scrivere EP_AV_03+ (RAG/Wiki/Agenti/Orchestrazione).
+**Milestone attivo:** Sessione #35: SISTEMA VERIFICA reale (git pulito, build TS 0 errori, RAG GPU ok) + RETE riparata (restart API → /api/graph/graphify e /api/rag/vectors da 404/500 → 200, toggle Conoscenza/Sistema LIVE) + n8n installato GLOBALE (2.25.6) e avvio-al-login riagganciato (START_LOGIN.bat usa binario globale, fallback npx) + diagnosi STORIE (124 ep ma lavoro recente 0 episodi) + VISIONE Nina-PRODOTTO catturata nel canone (BIBBIA §0-bis: derivazione educativa di MIMS, scaletta/changelog-driven, scope tech+finanza).
+**Prossimo step:** STORIE: creare i 'semi' tecnici reali del lavoro recente che hanno 0 episodi (Graphify/RAG→Wiki, RETE-grafo, AI Watcher, Centro di Controllo) → CONTENT_ENGINE/DATABASE/episodes + build_episodes_json.py. POI Nina rifatta da zero (impronta validata, agganciata alla scaletta). POI nodo SELF_IMPROVE (agente autonomo notturno, read-only+PR, mai merge auto su main).
 
 ---
 
@@ -59,15 +59,18 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- AI News Watcher catturato: BRAIN/AI_NEWS_WATCHER_BRIEF.md (30+ creator + handle, logica tier 48h con rotazione) + scaffold DATA/ai_news_watcher_state.json (07/06/2026)
-- AI News Watcher v1 KEYLESS costruito+testato: NODES/AI_NEWS_WATCHER/watcher.py + launcher night_ai_watch.bat; 4 sorgenti (GitHub via gh, siti RSS, YouTube RSS) zero chiavi, tier+rotazione, 67+30 segnali reali (07/06/2026)
-- UI anti-sovraccarico: vista CONTROLLO (Centro di Controllo: ogni strumento cosa fa/come si usa/se acceso) + STORIE v3.0 a fisarmonica; skill salva +memoria/+grafo; apertura→CONTROLLO (07/06/2026)
 - RETE riparata + integrata Graphify: era rotta (doppio api_server, indice stale); toggle sorgente Conoscenza(RAG)/Sistema(Graphify), nuovo endpoint /api/graph/graphify (stessa forma → motore 3D invariato), endpoint RAG blindato (07/06/2026)
 - Binario AVVENTURA esteso: bozza MAPPA_AVVENTURA.md multi-livello (Mondo→7 Regioni dell'arco IA→semi tecnici→Pietre) + vista navigabile 'Mappa dell'Avventura' (AvventuraMapView) + 3 episodi definitivi EP_AV_00/01/02 (Loop→Automazione→LLM), build verde (09/06/2026)
+- SISTEMA VERIFICA + RETE riparata: restart API ha portato /api/graph/graphify e /api/rag/vectors da 404/500 → 200 (toggle RETE Conoscenza/Sistema ora LIVE); git pulito, build TS 0 errori, RAG GPU verificato (10/06/2026)
+- n8n installato globale (npm i -g n8n, 2.25.6) + avvio-al-login riagganciato: START_LOGIN.bat step 4 usa binario globale (%N8N% start) con fallback npx — niente più reinstall ~4min a ogni login (10/06/2026)
+- VISIONE Nina-PRODOTTO a canone (BIBBIA §0-bis): Nina = versione educativa introduttiva di MIMS (derivazione del prodotto), scaletta/changelog-driven (persona curiosa che sbaglia→sistema→aggiorna), scope > arco IA (anche 'cos'è un ambiente Python') + verticale finanza personale; nodo SELF_IMPROVE (agente autonomo notturno read-only+PR) messo in bussola dopo gli episodi (10/06/2026)
 
 ### Episodi recenti
-- *La Mente che Parla*
-- *L'Incantesimo che si Ripete*
+- *Il Direttore*
+- *L'Esercito Silenzioso*
+- *Chi guardare più spesso — il tier a rotazione 48h*
+- *Guardare senza chiavi — gh, RSS, YouTube*
+- *Il gate di rilevanza — tenere il segnale, buttare il rumore*
 
 ---
 
