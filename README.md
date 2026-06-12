@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #46 | 11 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #49 | 12 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #35: SISTEMA VERIFICA reale (git pulito, build TS 0 errori, RAG GPU ok) + RETE riparata (restart API → /api/graph/graphify e /api/rag/vectors da 404/500 → 200, toggle Conoscenza/Sistema LIVE) + n8n installato GLOBALE (2.25.6) e avvio-al-login riagganciato (START_LOGIN.bat usa binario globale, fallback npx) + diagnosi STORIE (124 ep ma lavoro recente 0 episodi) + VISIONE Nina-PRODOTTO catturata nel canone (BIBBIA §0-bis: derivazione educativa di MIMS, scaletta/changelog-driven, scope tech+finanza).
-**Prossimo step:** STORIE: creare i 'semi' tecnici reali del lavoro recente che hanno 0 episodi (Graphify/RAG→Wiki, RETE-grafo, AI Watcher, Centro di Controllo) → CONTENT_ENGINE/DATABASE/episodes + build_episodes_json.py. POI Nina rifatta da zero (impronta validata, agganciata alla scaletta). POI nodo SELF_IMPROVE (agente autonomo notturno, read-only+PR, mai merge auto su main).
+**Milestone attivo:** Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA 0-ter (Nina ha il suo OS) + indice PIETRE auto-generato + FATTI(per il RAG) sui 4 semi. 153 ep, build TS verde, ~14 commit isolati.
+**Prossimo step:** Sessione #38 (Fable 5 red-team): branch fix/redteam-s38 con 4 fix isolati (night_audit evidence-based, CORS chiuso, FileBrowser de-hardcoded, igiene+requirements-rag) DA REVISIONARE e mergere a mano su main (mai auto). RAG 200 + watchdog auto-restart 10s + tsc verde verificati. Poi: FINANZA reg2 "Spendere meno di quanto entra" (open loop pronto). Decisioni aperte: scalare asse_nina ai 129, viste 2 assi in dashboard.
 
 ---
 
@@ -59,18 +59,17 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- RETE riparata + integrata Graphify: era rotta (doppio api_server, indice stale); toggle sorgente Conoscenza(RAG)/Sistema(Graphify), nuovo endpoint /api/graph/graphify (stessa forma → motore 3D invariato), endpoint RAG blindato (07/06/2026)
-- Binario AVVENTURA esteso: bozza MAPPA_AVVENTURA.md multi-livello (Mondo→7 Regioni dell'arco IA→semi tecnici→Pietre) + vista navigabile 'Mappa dell'Avventura' (AvventuraMapView) + 3 episodi definitivi EP_AV_00/01/02 (Loop→Automazione→LLM), build verde (09/06/2026)
-- SISTEMA VERIFICA + RETE riparata: restart API ha portato /api/graph/graphify e /api/rag/vectors da 404/500 → 200 (toggle RETE Conoscenza/Sistema ora LIVE); git pulito, build TS 0 errori, RAG GPU verificato (10/06/2026)
-- n8n installato globale (npm i -g n8n, 2.25.6) + avvio-al-login riagganciato: START_LOGIN.bat step 4 usa binario globale (%N8N% start) con fallback npx — niente più reinstall ~4min a ogni login (10/06/2026)
-- VISIONE Nina-PRODOTTO a canone (BIBBIA §0-bis): Nina = versione educativa introduttiva di MIMS (derivazione del prodotto), scaletta/changelog-driven (persona curiosa che sbaglia→sistema→aggiorna), scope > arco IA (anche 'cos'è un ambiente Python') + verticale finanza personale; nodo SELF_IMPROVE (agente autonomo notturno read-only+PR) messo in bussola dopo gli episodi (10/06/2026)
+- Mappa di Nina percorribile a LV illimitati, data-driven dall asse_nina: Regioni 0-7 (Tech) + verticale FINANZA (1-4) si popolano da sole; rinominata Mappa, mappa di sistema -> ARCHITETTURA (11/06)
+- ARCO NINA COMPLETO 8/8: EP_AV_M0 Materia, AV_00 Loop, 01 Automazione, 02 LLM, 03 RAG, 04 Wiki, 05 Agenti, 06 Orchestrazione; +EP_AV_FIN_01 Il Valore (verticale finanza) (11/06)
+- Canon BIBBIA 0-ter: Nina ha il suo OS (si perde come Matteo, glielo costruisce il papa-meccanico; la Mappa E l OS di Nina) (11/06)
+- Indice PIETRE.md auto-generato (Tech+Finanza) + blocco FATTI(per il RAG) sui 4 semi + riflusso MENTE/KNOWLEDGE/genesis_nodi_fatti.md (11/06)
+- Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)
 
 ### Episodi recenti
-- *Il Direttore*
-- *L'Esercito Silenzioso*
-- *Chi guardare più spesso — il tier a rotazione 48h*
-- *Guardare senza chiavi — gh, RSS, YouTube*
-- *Il gate di rilevanza — tenere il segnale, buttare il rumore*
+- *La Materia*
+- *HMI acquisito, V32 respira*
+- *8 pezzi, geometria perfetta*
+- *Il Valore — cosa sono davvero i soldi*
 
 ---
 
