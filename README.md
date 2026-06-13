@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #49 | 12 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #47 | 13 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -38,7 +38,7 @@ Nessuna laurea. Solo proof-of-work reali.
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
 **Milestone attivo:** Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA 0-ter (Nina ha il suo OS) + indice PIETRE auto-generato + FATTI(per il RAG) sui 4 semi. 153 ep, build TS verde, ~14 commit isolati.
-**Prossimo step:** Sessione #38 (Fable 5 red-team): branch fix/redteam-s38 con 4 fix isolati (night_audit evidence-based, CORS chiuso, FileBrowser de-hardcoded, igiene+requirements-rag) DA REVISIONARE e mergere a mano su main (mai auto). RAG 200 + watchdog auto-restart 10s + tsc verde verificati. Poi: FINANZA reg2 "Spendere meno di quanto entra" (open loop pronto). Decisioni aperte: scalare asse_nina ai 129, viste 2 assi in dashboard.
+**Prossimo step:** Approvare UAC del restart API (RAG torna 200). Poi: FINANZA reg2 "Spendere meno di quanto entra" (open loop pronto). FOCUS: usare Fable 5 (entro 22/06) per SELF_IMPROVE/red-team (audit critico 360 + migliorie prioritizzate, proposte PR mai merge auto su main). Decisioni aperte: scalare asse_nina ai 129, viste 2 assi in dashboard, Nina 0 MATERIA gia fatto (EP_AV_M0).
 
 ---
 
@@ -66,10 +66,8 @@ Nessuna laurea. Solo proof-of-work reali.
 - Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)
 
 ### Episodi recenti
-- *La Materia*
-- *HMI acquisito, V32 respira*
-- *8 pezzi, geometria perfetta*
-- *Il Valore — cosa sono davvero i soldi*
+- *Automazioni notturne portabili: _ti_paths.bat (res*
+- *Vista METODO sul sito — spiegazione chi/cosa/come *
 
 ---
 
