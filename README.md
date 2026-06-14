@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #47 | 13 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #48 | 14 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -66,8 +66,10 @@ Nessuna laurea. Solo proof-of-work reali.
 - Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)
 
 ### Episodi recenti
-- *Automazioni notturne portabili: _ti_paths.bat (res*
-- *Vista METODO sul sito — spiegazione chi/cosa/come *
+- *Mille Volte Uguale*
+- *Il Soldato Caduto in Silenzio*
+- *Quando la Mente Inventa*
+- *Il Segno che Resta*
 
 ---
 
