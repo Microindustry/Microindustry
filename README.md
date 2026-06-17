@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #61 | 16 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #67 | 17 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -66,10 +66,7 @@ Nessuna laurea. Solo proof-of-work reali.
 - Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)
 
 ### Episodi recenti
-- *Prima la Mano, Poi la Macchina*
-- *La Mappa Viva*
-- *Mille Volte Uguale*
-- *Il Soffio di Troppo*
+
 
 ---
 
