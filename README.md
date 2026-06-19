@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #71 | 18 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #73 | 20 Jun 2026 00:06
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #37: rifare le STORIE a 2 ASSI (RUOLO+NINA) rebuild-safe integrati coi N-livelli sui contenuti (parent/level/children) + Mappa di Nina percorribile data-driven dall asse_nina (Regioni 0-7, +verticale FINANZA) + ARCO NINA COMPLETO 8/8 (EP_AV_M0 Materia ... EP_AV_06 Direttore) + canon BIBBIA 0-ter (Nina ha il suo OS) + indice PIETRE auto-generato + FATTI(per il RAG) sui 4 semi. 153 ep, build TS verde, ~14 commit isolati.
-**Prossimo step:** Approvare UAC del restart API (RAG torna 200). Poi: FINANZA reg2 "Spendere meno di quanto entra" (open loop pronto). FOCUS: usare Fable 5 (entro 22/06) per SELF_IMPROVE/red-team (audit critico 360 + migliorie prioritizzate, proposte PR mai merge auto su main). Decisioni aperte: scalare asse_nina ai 129, viste 2 assi in dashboard, Nina 0 MATERIA gia fatto (EP_AV_M0).
+**Milestone attivo:** Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout), animazioni solo CSS, calendario sidebar mancante. Metodo correttivo Matteo 18/06: INTEGRA non rifare, USA gli agenti.
+**Prossimo step:** FATTO nella sessione riparti (18/06): pitch visibili (43e74471), pilastri reintegrati+animazioni motion (ffea8129), CALENDARIO sidebar (a3bfe418), denylist .env su API. RESTANO: 1) night_audit 'Unterminated string' parse difensivo; 2) Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE; 3) estendere animazioni motion a CV/pitch/critiche; 4) link Desktop sito Maria (serve URL da Matteo). REGOLA: integra, non rifare.
 
 ---
 
