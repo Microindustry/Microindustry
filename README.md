@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #80 | 22 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #86 | 23 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #38: NotebookLM collegato a Claude Code (11 notebook/93 fonti) + pitch per-progetto + CV unito + Nina CV + Mappa Gioco + pilastri-spiegazione + critiche v2.1 attacco Opus. MA con DEBITO da integrare: i pitch non si vedono (legati ad API spenta), i pilastri sono acerbi (svuotato CanvasLayout), animazioni solo CSS, calendario sidebar mancante. Metodo correttivo Matteo 18/06: INTEGRA non rifare, USA gli agenti.
-**Prossimo step:** FATTO nella sessione riparti (18/06): pitch visibili (43e74471), pilastri reintegrati+animazioni motion (ffea8129), CALENDARIO sidebar (a3bfe418), denylist .env su API. RESTANO: 1) night_audit 'Unterminated string' parse difensivo; 2) Obsidian Mari/VULCAN/MIMS + riordino _DA_ORDINARE; 3) estendere animazioni motion a CV/pitch/critiche; 4) link Desktop sito Maria (serve URL da Matteo). REGOLA: integra, non rifare.
+**Milestone attivo:** Sessione #42 (23/06) BLACKOUT: andata via la luce -> ChromaDB corrotto (HNSW). Diagnosi+cura completa. RECOVERY RAG a 2 LIVELLI (rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard): L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD; copre corruzione+divergenza; agganciato al self-heal notturno. BUG RADICE crash: api_server hidden = stdout/stderr invalidi -> torch nativo crasha; fix redirect su logfile + guardie devnull/stdout. RESET FISICO chroma_db (--rebuild-hard): su chromadb 0.5.23 il reset-per-id non azzera le label hnswlib -> KeyError np.uint64; solo lo spostamento fisico (HNSW da 0) pulisce. GPU rimessa (rag_device.txt=cuda). research_agent v1.2 (backoff 429 + guardia globale). OBSIDIAN: 108 titoli corretti (additivo, no rename, 967 wikilink intatti) + intersect rigenerato (vault 2881 + storie 950 + ponti + wiki). RAG verificato 32974 chunk, 6/6 query ok.
+**Prossimo step:** ULTRACODE: rendere NINA DEFINITIVA — filone UNICO discorsivo inizio->fine, UNA SOLA VERITA' sul RAG (canone=EP_N2 v2, vecchi EP_AV_*->archivio; ordinare il cammino con open loop concatenati; audit STORIE). Stile DECISO in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Poi animazione+voce. Aperti: UPS hardware (cura power-loss), API key Semantic Scholar, chunking per heading.
 
 ---
 
@@ -59,14 +59,15 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- Mappa di Nina percorribile a LV illimitati, data-driven dall asse_nina: Regioni 0-7 (Tech) + verticale FINANZA (1-4) si popolano da sole; rinominata Mappa, mappa di sistema -> ARCHITETTURA (11/06)
-- ARCO NINA COMPLETO 8/8: EP_AV_M0 Materia, AV_00 Loop, 01 Automazione, 02 LLM, 03 RAG, 04 Wiki, 05 Agenti, 06 Orchestrazione; +EP_AV_FIN_01 Il Valore (verticale finanza) (11/06)
-- Canon BIBBIA 0-ter: Nina ha il suo OS (si perde come Matteo, glielo costruisce il papa-meccanico; la Mappa E l OS di Nina) (11/06)
-- Indice PIETRE.md auto-generato (Tech+Finanza) + blocco FATTI(per il RAG) sui 4 semi + riflusso MENTE/KNOWLEDGE/genesis_nodi_fatti.md (11/06)
-- Fix crash dashboard: rimossa MAPPA_RADICE (ReferenceError TDZ, usava REGIONI prima dell init); radice ora data-driven in buildMappa (11/06)
+- BLACKOUT recovery RAG a 2 livelli (23/06): rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard; L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD; copre corruzione (probe) E divergenza (stats); agganciato al self-heal notturno night_research.bat (sostituisce rebuild_rag_clean). Commit d1863576
+- Fix bug radice crash post-blackout (23/06): api_server hidden ha stdout/stderr handle OS invalidi -> torch nativo crasha (reset su /api/rag/search); redirect su logfile in restart_api/rebuild_rag_clean/rag_recover/rag_update_exclusive + guardia devnull in api_server.py + guardia stdout in rag_engine.py
+- RESET FISICO chroma_db (23/06, commit 04c3f71a): su chromadb 0.5.23 il reset-per-id NON azzera lo spazio-label hnswlib -> label fantasma > count -> KeyError np.uint64 su alcune query; --rebuild-hard + reset_chroma_dir() spostano la cartella fisica (HNSW da 0). RAG verificato 32974 chunk, 6/6 query ok
+- GPU rimessa + research_agent v1.2 (23/06): rag_device.txt=cuda (init CUDA non satura piu' il commit, query ~5x); research_agent backoff esponenziale 429/503 + API-key opzionale + guardia globale (log JSON, niente catena abortita), testato live
+- OBSIDIAN titoli + intersect (23/06, MENTE d9b044a): 108 titoli normalizzati (H1+frontmatter title da source/notebook) ADDITIVO senza rename (967 wikilink intatti, no clobber heading corpo); fix_titoli_vault.py; intersect rigenerato vault(2881)+storie(950,0 isolati)+ponti+wiki(651 note)
 
 ### Episodi recenti
-
+- *Il Guardiano che Non Dorme*
+- *Memory Getac importata su PC fisso*
 
 ---
 
