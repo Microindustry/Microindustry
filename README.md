@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #86 | 23 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #89 | 24 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #42 (23/06) BLACKOUT: andata via la luce -> ChromaDB corrotto (HNSW). Diagnosi+cura completa. RECOVERY RAG a 2 LIVELLI (rag_recover.ps1 + rag_engine --probe/--drop-hnsw/--rebuild-hard): L1 sposta solo il segmento HNSW (Chroma ricostruisce da sqlite, no ri-embed), L2 rebuild HARD; copre corruzione+divergenza; agganciato al self-heal notturno. BUG RADICE crash: api_server hidden = stdout/stderr invalidi -> torch nativo crasha; fix redirect su logfile + guardie devnull/stdout. RESET FISICO chroma_db (--rebuild-hard): su chromadb 0.5.23 il reset-per-id non azzera le label hnswlib -> KeyError np.uint64; solo lo spostamento fisico (HNSW da 0) pulisce. GPU rimessa (rag_device.txt=cuda). research_agent v1.2 (backoff 429 + guardia globale). OBSIDIAN: 108 titoli corretti (additivo, no rename, 967 wikilink intatti) + intersect rigenerato (vault 2881 + storie 950 + ponti + wiki). RAG verificato 32974 chunk, 6/6 query ok.
-**Prossimo step:** ULTRACODE: rendere NINA DEFINITIVA — filone UNICO discorsivo inizio->fine, UNA SOLA VERITA' sul RAG (canone=EP_N2 v2, vecchi EP_AV_*->archivio; ordinare il cammino con open loop concatenati; audit STORIE). Stile DECISO in MENTE/KNOWLEDGE/NINA_STILE_E_PIANO.md. Poi animazione+voce. Aperti: UPS hardware (cura power-loss), API key Semantic Scholar, chunking per heading.
+**Milestone attivo:** Sessione #44 (24/06): NINA COPRE LA MAPPA — 50 episodi EP_N2. Driver nina_map_cover.py genera un episodio Nina per ogni concetto DISTINTO della mappa senza versione (31 fonte: Graphify/RETE/t-SNE/orchestratore/watcher/controllo) -> copertura in ampiezza ⟡0→⟡7, auto-canone grounded sul RAG. +3 dal loop nativo. RAG RESUSCITATO (corruzione HNSW + commit-leak 56GB liberato, --drop-hnsw). Menu Storie a 3 voci top-level. EP_N2_01 riscritto come vero inizio. Poster pilota (Claude Design). 2 rinforzi (rag_recover anti-commit-leak; chromadb-ops valutato e rifiutato). Vetrina pubblica README + ECOSYSTEM_MANIFEST riallineati ai 15 nodi reali (erano 8).
+**Prossimo step:** DA DECIDERE CON MATTEO (svegli): gitignore DATA/views(298 auto-gen)+logs; raggruppare/indicizzare AUTOMATIONS/core(~30 script piatti); pulire INBOX; irrobustire resolver YouTube watcher. Candidato RAG: implementare WAL→HNSW commit contro 0.5.23. Nina: 50 ep nel canone, mappa coperta -> prossimo naturale = animatic pilota EP_N2_01 (era in pausa) o verticali nuovi (FORGE saldatura, MIMS).
 
 ---
 
@@ -66,8 +66,11 @@ Nessuna laurea. Solo proof-of-work reali.
 - OBSIDIAN titoli + intersect (23/06, MENTE d9b044a): 108 titoli normalizzati (H1+frontmatter title da source/notebook) ADDITIVO senza rename (967 wikilink intatti, no clobber heading corpo); fix_titoli_vault.py; intersect rigenerato vault(2881)+storie(950,0 isolati)+ponti+wiki(651 note)
 
 ### Episodi recenti
-- *Il Guardiano che Non Dorme*
-- *Memory Getac importata su PC fisso*
+- *Il semaforo che mente*
+- *La scatola magica dei compiti*
+- *Il Libro delle Ricette di Nonna*
+- *La Tela — Chi guarda il quadro?*
+- *La Stanza della Visione*
 
 ---
 
