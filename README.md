@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #92 | 25 Jun 2026 04:07
+### Stato Live — v1.1.0 | Sessione #97 | 26 Jun 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #45 (24/06): CRITICHE AZZERATE sulle 3 fonti del sidebar. Auto-audit 31->9 (burn-down via /loop autonomo: gitignore DATA/views, research_agent v1.3 query-broadening+summary, warning HF silenziato, gate self-improve documentato; stale chiuse). Canone manuale 33->25 (sweep). Bussola 41->20 (groom + bug 42 todo-fantasma TOC fixato). Header CRITICHE onesto (totale 3 fonti + chip, niente piu' '33' opaco) + deep-link #view per dash_shot. DECISIONE MIMS connettori = Via B (compressione VULCAN, processo proprietario B2) a canone. Silent block -> v.B Ø18mm. DE-HARDCODE benen: 5 registrar legacy resi portabili poi RIMOSSI (ridondanti con register_night_tasks.ps1). Build TS verde, tutto pushato.
-**Prossimo step:** AZIONI_MATTEO.md (solo Matteo): UPS + mandrino ER20 in 1 checkout (cura radice HNSW + sblocca MIMS); chiavi .env (Semantic Scholar gratuita + rotazione red-team #38); URL sito Maria. Poi: enhancement RAG (chunking per heading, backup snapshot chroma_db in _VAULT/BACKUPS); contenuto Nina verticale finanza ₣2 'spendere meno di quanto entra' (open loop pronto).
+**Milestone attivo:** Sessione #49 (25/06): PRE_01 preambolo Nina come CAROSELLO che SPIEGA il progetto. Iterato v1->v10: stile buonanotte + FLUSSO sfumato continuo (onda su x globale). Scartato v8 vignette/fumetto. v10 ATTUALE = 17 slide, linguaggio semplice/ricco: Cover, Cos-e, Perche, Per-chi-e, Il Patto, Nina, Themis, Atomi<->Bit, I 4 simboli, La Giuntura, Le 8 Pietre, Cosa imparerai, Come funziona, Si ripassa, Da dove nasce, La promessa, Si parte. 17 PNG singole slides/slide_1..17. Versioni in _VERSIONI/. Integrato in RAG+Obsidian.
+**Prossimo step:** Matteo manda un FILE da leggere/riflettere -> se serve cambiare il preambolo si fa ORA (prima di bloccarlo). Poi export Adobe Express (export_html_to_express, readiness skill). Aperti: scelta onda v5 sfumata (attuale) vs v4 intreccio; altri caroselli; EP_N2_01 a questo livello.
 
 ---
 
@@ -59,17 +59,16 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- OBSIDIAN titoli + intersect (23/06, MENTE d9b044a): 108 titoli normalizzati (H1+frontmatter title da source/notebook) ADDITIVO senza rename (967 wikilink intatti, no clobber heading corpo); fix_titoli_vault.py; intersect rigenerato vault(2881)+storie(950,0 isolati)+ponti+wiki(651 note)
-- CRITICHE sidebar azzerate sulle 3 fonti (24/06 sess.#45): auto-audit 31->9, canone manuale 33->25, bussola 41->20. Burn-down auto-audit via /loop autonomo (fermato sui blocchi-Matteo). 18+ critiche chiuse con note tracciabili. Build TS verde, pushato
-- Header CRITICHE onesto + bug-fix (24/06): da '33' opaco a totale-3-fonti + chip per-fonte (canone/audit/bussola); fixato bug 42 'todo-fantasma' (ancore-TOC parse-ate come todo, bussola 81->39 reali); deep-link #view in systemStore per screenshottare qualsiasi vista headless (dash_shot)
 - MIMS connettori = Via B DECISO (24/06): compressione VULCAN (processo proprietario per B2, capitale basso, dentro il moat-Formula) a canone SCHEDA §5 + STATE. Silent block V8 -> v.B Ø18mm (reversibile). Sblocca BEP/B2
 - De-hardcode benen completo (24/06): 5 registrar legacy AUTOMATIONS/tools resi portabili in place ($PSScriptRoot/%~dp0 + env, ASCII-norm, fix bug && PS5.1) poi RIMOSSI (git rm, recuperabili) perche' ridondanti con register_night_tasks.ps1. Zero hardcode benen veri nel repo
+- RAG v4.2 SOTA-2026 (24-25/06): chunking heading-aware (.md, +breadcrumb) + snapshot chroma_db in _VAULT/BACKUPS (rotazione 3) + GraphRAG-lite wikilink-expansion (rag_linkgraph.json, espande [[link]] dai top-3 cap+8, reranker gata). _DA_ORDINARE->_ARCHIVIO fuori dal canone (V6 superato non inquina piu'). HNSW rigenerato via rag_recover (UAC). Prova: EP_N2_51 grounded+connesso. Nina=auto-promozione decisa. Build verde, pushato (79908408+a0f6a9b9+9e3bde3a)
+- RETE visiva da 2 link (Konik+Hermes) (25/06 sess#47): (1) orfani di RETE nella cartella clinica (vault_intersect v2.1->vault_orphans.json, night_audit v1.4 critica RETE, setup_obsidian lo lancia di notte; 393 note/2 orfani veri); (2) orfani colorati nella RETE 3D (anello rosso+filtro); (3) RETE viva: freschezza mtime + hub degree + memoria 2 livelli Hermes (core/vault) + legenda (/api/rag/vectors +orphan+degree+age_days+tier); (4) transizioni morbide (scena WebGL persistente + fade-in, no remount al filtro). Commit 38bd6fc0+b3675b3c+91fb8672+98fd7109. tsc -b + py_compile verdi
+- Adobe Express + caroselli Nina (25/06 sess#48): export_html_to_express provato (account auth) -> EP_N2_01 carosello 8 slide in Express (font Adobe kit zhv2kry). Org POSTER/CAROSELLI/<EP_ID>/ (carosello.html+caption.txt+README.md+slides/). BIBBIA_VISIVA_CAROSELLI.md + BRIEF_ILLUSTRATORE_PERSONAGGI.md. Simboli mondo definitivi. Preambolo PRE_01 'Il Mondo di Nina' 8 slide illustrate ricche (porta/luna/calibro/ponte/mappa Pietre, filo-ponte, PNG pronti). Stile blueprint-anime alla Geronimo Stilton, no foto reali, personaggi via illustratore. tsc -b verde, 0 orfani episodi
 
 ### Episodi recenti
+- *Il Sussurratore che Indovina*
 - *Il semaforo che mente*
 - *La scatola magica dei compiti*
-- *Il Libro delle Ricette di Nonna*
-- *La Tela — Chi guarda il quadro?*
 
 ---
 
