@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #101 | 02 Jul 2026 15:44
+### Stato Live — v1.1.0 | Sessione #102 | 03 Jul 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #50 (26-27/06): NINA ha un VOLTO definitivo (3D). Bloccato nina_DEFINITIVA (=nina_genio_1): mora, mix colombiana+sud Italia, coda alta, lentiggini, sguardo sicuro. REGOLA: ogni futura Nina deve avere QUESTO viso (slide_2=riferimento vincente); NO bionda, NO logo. Pipeline avatar DECISA: 3D via Gamma (stylePreset 3D, flux-2-klein). Versione VITA=giacca denim. Scene riusabili Nina/_SCENE (studio, ponte). Slide montate (ritratto in cornice + figura intera nella scena). PRE_03 carosello 'I Personaggi' SOLO NINA col volto vero, 6 slide. Canone in MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md. Altri personaggi per ora = simboli/Pietre.
-**Prossimo step:** PROSSIMA SESSIONE #51: (1) decidere se serve un episodio 'Personaggi' dedicato o se Nina si presenta DENTRO l'episodio 4; (2) controllare PRE_01/PRE_02, rifinire PRE_03, poi PRE_04; (3) ricontrollare EP_1 effettivo; (4) Nina versioni officina/tech; (5) rag-update per indicizzare il canone Nina.
+**Milestone attivo:** Sessione #51 (27/06-02/07): PREAMBOLO NINA CHIUSO (PRE_01 cos'e + PRE_02 come funziona + PRE_03 v5 scheda-personaggi 17 slide: Nina/Themis/Forge/Entropia, glifi distinti, foto Nina base64 inline). DECISO: Nina si presenta VIVA dentro l'EP_1 reale (non episodio dedicato); preambolo=anagrafica, episodi=storia. EP_N2_01 'La Bambina che Chiedeva Perche' e EP_N2_02 'Il Soffio di Troppo' RIFATTI al nuovo standard: 16 slide blueprint SVG narrativo, volto Nina definitivo, zero foto, stesso flusso. Generatori riusabili _build_ep.py + _render_all.py per episodio. Niente PRE_04 (eviterebbe ripetizione).
+**Prossimo step:** PROSSIMA SESSIONE #52 (APRIRE CON FABLE 5): (0) *** ATTACCO ESERCITO *** — lancia i 7 specialisti in parallelo (general-purpose, model=fable), piano in DOCS/ATTACCO_20260702/_PIANO.md, report additivi propose-only -> sintesi -> bussola; (1) EP_N2_03 'la MISURA'; (2) export Express; (3) PRE_01/02; (4) Nina officina/tech.
 
 ---
 
@@ -59,15 +59,14 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- Adobe Express + caroselli Nina (25/06 sess#48): export_html_to_express provato (account auth) -> EP_N2_01 carosello 8 slide in Express (font Adobe kit zhv2kry). Org POSTER/CAROSELLI/<EP_ID>/ (carosello.html+caption.txt+README.md+slides/). BIBBIA_VISIVA_CAROSELLI.md + BRIEF_ILLUSTRATORE_PERSONAGGI.md. Simboli mondo definitivi. Preambolo PRE_01 'Il Mondo di Nina' 8 slide illustrate ricche (porta/luna/calibro/ponte/mappa Pietre, filo-ponte, PNG pronti). Stile blueprint-anime alla Geronimo Stilton, no foto reali, personaggi via illustratore. tsc -b verde, 0 orfani episodi
-- PRE_01 preambolo Nina -> CAROSELLO a 17 slide che SPIEGA il progetto (25/06 sess#49): iterato v1->v10 (stile buonanotte + flusso sfumato continuo su x globale; scartata v8 vignette). v10 = Cover/Cos-e/Perche/Per-chi-e/Patto/Nina/Themis/Atomi-Bit/4-simboli/Giuntura/8-Pietre/Cosa-imparerai/Come-funziona/Si-ripassa/Da-dove-nasce/Promessa/Si-parte. 17 PNG singole; versioni in _VERSIONI/+INDEX; tool _render_pair.py; integrato RAG+Obsidian. Verifiche: 0 orfani, build 215, tsc EXIT 0
-- PRE_02 "Come funziona Nina" — 2o carosello del preambolo (16 slide, 26/06 sess#49): integra la visione Libro-IA in lingua semplice (Organismo, Mappa Viva, doppio fondo, test della sarta, sotto-i-piedi RAG/GPU vero, ancoraggio, motore infinito, cresce-da-se, scalabilita, Provalo tu, Nina<->HR, eredita, Episodio 1). 16 PNG singole + README + caption. Serie preambolo: PRE_01 overview + PRE_02 come funziona, stesso flusso continuo
-- Sessione #50 (26-27/06): VOLTO DI NINA BLOCCATO (nina_DEFINITIVA=nina_genio_1) — mora, mix colombiana+sud Italia, coda alta, lentiggini; pipeline avatar 3D via Gamma flux-2-klein; versione VITA=giacca denim; scene riusabili (studio/ponte); slide-personaggio + slide-scena; PRE_03 carosello 'I Personaggi' SOLO NINA col volto vero (6 slide); canone in MENTE/KNOWLEDGE/NINA_DESIGN_DEFINITIVO.md + memoria project_nina_avatar. Decisione: altri personaggi per ora solo simboli/Pietre. REGOLA: ogni futura Nina = quel viso
-- Sessione #50: PRE_01 slide 11 (le 8 Pietre) ridisegnata — da 8 diamanti col numero a 8 gemme con ICONA senza numeri (⟡0 dado=Atomi, ⟡5 rete=Bit) + nomi sotto (Materia..Direttore); versione _VERSIONI/v12_icone-8-pietre
+- Sessione #51: PREAMBOLO NINA CHIUSO — PRE_03 v5 'scheda dei personaggi' (character bible, 17 slide) rifatta dopo scarti v2/v3/v4: NON ripete PRE_01, va in profondita su Nina(foto/carattere/luci-ombre/aspetto/arco)+Themis(custode misura, allineato canone)+Forge(NUOVO)+Entropia(NUOVO)+cast; glifi tutti distinti, foto Nina base64 inline (self-contained, export Express ok); generatore _build_pre03.py v2.0, snapshot v5_personaggi-profondi. Niente PRE_04 (02/07)
+- Sessione #51: DECISO dove si presenta Nina — PRE_03 = scheda-personaggi statica del preambolo; Nina si presenta VIVA in azione dentro l'EP_1 reale, non in un episodio narrativo dedicato (preambolo=anagrafica, episodi=storia) (02/07)
+- Sessione #51: EP_N2_01 'La Bambina che Chiedeva Perche' rifatto al NUOVO STANDARD — da 8 slide (pre-volto) a 16 slide blueprint SVG narrativo (scene disegnate, zero foto, stesso sfondo/flusso), 3 strati rispettati (bottoni=bambino, sarta=grande, pizzicore=cuore), generatore riusabile _build_ep.py+_render_all.py; snapshot v1_8slide_2506 + v2_blueprint-16slide (02/07)
+- Sessione #51: EP_N2_02 'Il Soffio di Troppo' al nuovo standard (16 slide blueprint SVG narrativo) — la Fucina/Forge, mezzo mm=il patto, test della sarta, precisione=relazione, tolleranza gradi non si/no; stesso impianto di EP_01 (generatore+README+caption); snapshot v1_blueprint-16slide (02/07)
+- Sessione #52-prep (02/07): infra refresh + RAG rebuild VERIFICATO. Default modello -> Fable 5 (.claude/settings.local.json, gitignored, repo pubblico). Dashboard riavviata (5173); Obsidian/ecosistema 595 note/3230 ponti/2 isolate; Pietre 9/82; 0 orfani; _CANONE.md ok 0 violazioni. RAG full rebuild-hard (post-Obsidian) allineato 25049 semantico==bm25 (HNSW pulito, heading-aware v4.1); query end-to-end conferma storie->RAG->Nina (EP_N2_02 top hit). PIANO D'ATTACCO esercito 7 domini (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG) ingegnerizzato e congelato in DOCS/ATTACCO_20260702/_PIANO.md, propose-only/additivo, da eseguire su Fable.
 
 ### Episodi recenti
-- *Il Sussurratore che Indovina*
-- *Il semaforo che mente*
+
 
 ---
 
