@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #103 | 04 Jul 2026 04:07
+### Stato Live — v1.1.0 | Sessione #105 | 05 Jul 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -66,10 +66,9 @@ Nessuna laurea. Solo proof-of-work reali.
 - Sessione #52 (02-03/07): ATTACCO ESERCITO su Fable COMPLETO E SINTETIZZATO — 7 agenti general-purpose model=fable in parallelo (design/sicurezza/scrittura/software/news-IA/gestionale/integrita-RAG), ognuno un report additivo propose-only con file:riga in DOCS/ATTACCO_20260702/. Coordinatore Fable ha scritto _SINTESI.md (quadro per dominio + TOP 10 per leva) e portato TUTTE le azioni (TOP 10 + backlog completo per dominio) in DA_FARE_FATTO.md come [ ] DA FARE. Finding chiave: (P0) _CANONE.md:13 punta alla verita V32 vecchia/vietata (molle+recuperato) su cui Nina grounda; (P0) 55 file versioni superate dentro il canone RAG; EVA eva_server.py:162 bind 0.0.0.0+/inbox PII senza auth; commit-leak RAG senza guardia in api_server; Anthropic News watcher morto da 25gg; FINANCE/ vuota+BEP Via B non calcolabile; MOSSA1 checkout hardware = massima leva. Zero modifiche applicate al codice (gate propose-only).
 
 ### Episodi recenti
+- *Il Cartellino sulla Stoffa*
+- *Mille Volte Uguale*
 - *Il Sussurratore che Indovina (e a Volte Mente)*
-- *Chi guardare più spesso — il tier a rotazione 48h*
-- *Guardare senza chiavi — gh, RSS, YouTube*
-- *Il gate di rilevanza — tenere il segnale, buttare il rumore*
 
 ---
 
