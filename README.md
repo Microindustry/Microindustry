@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #109 | 08 Jul 2026 04:07
+### Stato Live — v1.1.0 | Sessione #112 | 09 Jul 2026 04:07
 
 | Pilastro | Progresso | Stato |
 |----------|-----------|-------|
@@ -37,8 +37,8 @@ Nessuna laurea. Solo proof-of-work reali.
 | **MIMS** (stampo tegole) | `███░░░░░░░ 30%` | Attende V32 |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #55 (07/07): PIANO #54 COMPLETO — ondate A-B-C tutte chiuse + filone verita' sparsa (1a tranche). Boot sporco curato alla radice (legacy CORE/watchdog respawnava doppioni -> single-instance su watchdog/watcher/api, guardia porta 5001, START_ECOSYSTEM stub, fix vite7 --silent). Retention disco (5 regole, 2.24GB) + deep_freeze senza chroma (2035->216MB). Canone ENFORCED: canon-pin RRF (27 note _CANONE) + rebuild esclusivo 18113==18113 (535 chunk persi recuperati) + indici cammino/pietre agganciati al build. 4 sentinelle notturne nuove (organi vivi, canone vault, pip-audit 42 CVE fixabili, QC 51 episodi). CLOBBER STATE.json trovato in flagrante e curato (load fail-safe + write atomico) — 68 milestone/107 sessioni ripristinate + snapshot giornaliero. NodeKit (4 copie -> 1, -256 righe, pixel-identici). Vista CRITICHE eliminata (decisione Matteo) -> CRITICHE.md notturno.
-**Prossimo step:** PROSSIMA SESSIONE #56, in ordine: (1) resto filone verita' sparsa — SYSTEM_TREE duplicato in MappaView (au18), % MIMS computata-vs-dichiarata, doc AUTOMATIONS_MASTER; (2) EP_N2_03 'la Misura' carosello 16 slide; (3) sessione CVE (42 fix, test finetune dopo); (4) decisione Matteo su viste doppie neuro/sinapsi. GATED MATTEO: hardware Vevor+ER20+UPS, chiave Semantic Scholar, trade secrets in _VAULT.
+**Milestone attivo:** Sessione #56 (08/07): VERITA' SPARSA punto 1 CHIUSO (au18 Mappa derivata da mappaData.ts, au09 % con nome esplicito, au16 MASTER declassato ad archivio) + LE 3 FACCE (decisione Matteo): sidebar TITANIUM/NINA/PUBBLICAZIONI, ripasso #32-56 in DOCS/RIPASSO_S32-56.md, vista PUBBLICAZIONI (stack Postiz+Graph API ri-verificato: IG max 10 slide, LinkedIn=PDF, slide gia' 1080x1350 a norma, Postiz ha MCP server) con scaletta attivazione 9 passi. Nuovo binario deciso: storie di sistema in prima persona (voce Matteo). Nina = primo treno, la forza e' la pipeline.
+**Prossimo step:** PROSSIMA SESSIONE #57 in MODO INGEGNERIZZATO (requisiti->design->additivo->verifica misurabile), in ordine: (1) analisi VALORE per pilastro (doc MENTE poi card home derivata); (2) HR/CV vivo (CV attuale = rumore); (3) attivazione PUBBLICAZIONI (passi 1-4 gated Matteo: mail, FB/IG, app Meta, Docker); (4) EP_N2_03 formato doppio; (5) CVE + viste doppie + backlog #52. GATED: hardware Vevor+ER20+UPS, chiave Semantic Scholar, trade secrets in _VAULT.
 
 ---
 
@@ -59,15 +59,15 @@ Nessuna laurea. Solo proof-of-work reali.
 ---
 
 ### Ultimi 5 milestone verificati
-- Sessione #55: igiene disco A REGOLA — retention.py (R1 chroma-debris keep-1+7gg, R2 BACKUPS/ts 45gg, R3 FULL keep-1, R4 log 30gg, R5 snapshots=3; dry-run default, report DATA/retention_last.json) in night_push; prima passata 2.24GB. Radice del gonfiore: deep_freeze zippava le chroma_db (2035MB il 05/07 vs 185 il 21/06) -> esclusione + freeze rigenerato 216MB AES verificato
-- Sessione #55: canone ENFORCED (07 P1) — canon-pin nel retrieval (set wikilink _CANONE.md, 27 note, cache mtime: bonus RRF in selezione + slot riservato top-k + campo canon in output; reranker resta giudice) + night_audit.check_canone_vault (id-collision note attive + freshness/copertura _CANONE 51==51). Rebuild esclusivo TOP10 #3: semantico==bm25 18113==18113, 535 chunk persi dal boot sporco recuperati, 0 chunk archivio
 - Sessione #55: 4 sentinelle notturne — organi vivi (7 output con soglia gg: organo che tace = critica), pip-audit settimanale (42 CVE fixabili in 9 pacchetti, solo fixabili = no rumore da stack pinnato), QC strutturale 51 EP_N2 (0 rotture; 28/51 senza open-loop = metrica), graphify update in coda notturna (grafo era fermo al 7/6: ora 7338 nodi). Indici cammino/pietre agganciati a build_episodes_json (step 7): un documento-verita' che si rigenera non deriva
 - Sessione #55: STATE.json CLOBBER trovato in flagrante (20:40) e CURATO — state_updater._load_state su decode error (lettura a meta' scrittura) restituiva il template default e il watcher lo salvava sopra: 68 milestone/107 sessioni/6 blockers cancellati e RIPRISTINATI dalla copia in contesto. Fix: load fail-safe (illeggibile = salta, mai ricreare) + _save_state ATOMICO (tmp+os.replace) + state_snapshot.py giornaliero (_VAULT, rotazione 14, valida prima di copiare). ERA la causa storica delle percentuali divergenti (au08/gc04)
 - Sessione #55: pulizia dashboard — NodeKit.tsx (NodeTile/NodeLevel condivisi: erano 4 copie identiche-a-tema-diverso, -256 righe, tsc verde + screenshot prima/dopo pixel-identici, critica gc01 chiusa). Vista CRITICHE ELIMINATA su decisione Matteo ('non si aggiorna') -> CRITICHE.md stile bussola in root (critiche_md.py: polso + canone per progetto + auto-audit aperte), rigenerato ogni notte da night_audit e auto-committato da night_push; fonti = i 2 JSON vivi
+- Verita' sparsa CHIUSA (08/07 sess#56): SYSTEM_TREE derivato da mappaData.ts (adapter SkillNode->MapNode, % computate nodeProgress, ROOT=media, -84 righe a mano, pct_sync v1.1 ritirato da MappaView) + % MIMS/GENESIS con nome esplicito (voci mappa vs pilastro STATE) + AUTOMATIONS_MASTER v1.3 archivio storico con 4 fonti vive
+- LE 3 FACCE (08/07 sess#56, decisione Matteo): sidebar TITANIUM/NINA/PUBBLICAZIONI (deep-link intatti, Archivio sotto-voce), RIPASSO_S32-56.md (5 fasi+canone operativo+carattere), PubblicazioniView (trovato/pipeline/criteri/scaletta 9 passi), vincoli ri-verificati doc Meta (10 slide max, LinkedIn PDF, slide 1080x1350 gia' a norma, Postiz MCP), binario nuovo 'voce Matteo', tsc verde + screenshot
 
 ### Episodi recenti
+- *Il Direttore Invisibile*
 - *Il Battito del Guardiano*
-- *Il Cartellino sulla Stoffa*
 
 ---
 
