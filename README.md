@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #128 | 15 Jul 2026 22:09
+### Stato Live — v1.1.0 | Sessione #129 | 16 Jul 2026 04:07
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -70,8 +70,8 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 - ATTACCO #2 impostato: DOCS/ATTACCO_20260716/_PIANO.md - colli di bottiglia ecosistema, 5 agenti Fable propose-only + ricognizione GitHub strumenti; P0 = verifica autogenerazione episodi->RAG + profilo GitHub (15/07/2026 #60)
 
 ### Episodi recenti
+- *La mano che insegna alla notte*
 - *La Giuntura che Respira*
-- *Il Dito che Insegna*
 
 ---
 
