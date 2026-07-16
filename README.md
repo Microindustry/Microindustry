@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #129 | 16 Jul 2026 04:07
+### Stato Live — v1.1.0 | Sessione #133 | 17 Jul 2026 00:02
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -40,8 +40,8 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 | **MIMS** (sistema modulare d'acciaio) | `███░░░░░░░ 30%` | Attende la pressa VULCAN |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Milestone attivo:** Sessione #60 (15/07): TABELLONE CAROSELLI PULITO 14/14 (QC 0 falle, 0 legacy). PRE_04 'Tutto e' vero' creato -> SERIE PRE NINA COMPLETA 4/4 (patto di verita', slide PONTE al binario Sistema, onde 31-40). PRE_03 v6.1 volto grande/libero in copertina (ordine Matteo). EP_SG_01_03 'Il Distacco' revisionato+promosso -> FINE RODAGGIO apprendista 3/3 (S1 3/69); coda estesa: CAP 2 L'ORGANISMO 6 item pending (guardie esplicite negli angoli). EP_N2_03 'Mille Volte Uguale' compilato (scaletta approvata prima) = primo del cammino a standard; poi 'sistema': EP_N2_01 v3 + EP_N2_02 v2 a standard (16->10, open loop 02 corretto). Regione 0 completa a carosello (caselle 1-2-3), cammino 3/53, totale Nina 7/57. Convenzione onde: PRE 1-40, cammino casella N = fase 40+(N-1)*10. ATTACCO #2 colli di bottiglia IMPOSTATO: DOCS/ATTACCO_20260716/_PIANO.md (Fable 5, propose-only, ricognizione GitHub strumenti).
-**Prossimo step:** PROSSIMA (#61): 1) P0 verifica AUTOGENERAZIONE episodi->RAG (story_agent/night_research/riflusso FATTI, con numeri) 2) P0 profilo GitHub personale aggiornato (README + pin 5 repo) 3) ATTACCO #2 colli di bottiglia (5 agenti Fable propose-only, piano in DOCS/ATTACCO_20260716) 4) risultati LinkedIn PRE_SG_01 (gated) 5) revisione bozza notturna EP_SG_02_01 V32.
+**Milestone attivo:** Sessione #62 (16/07): ESECUZIONE ONDATA A/B/C + promozione. ONDATA A completa (A1 canon-pin salta i wikilink SUPERSEDED; A2 coda auto-refill+multi-bozza col tetto; A3 fonti allineate _CANONE 53->56/piano/watcher.log rotante; A4 14,8 GB liberati via retention R6/R7 + .obsidian fuori canone). EP_SG_02_01 «V32» revisionato §7.7 e promosso (S1 4/69). ONDATA B: PDF LinkedIn per episodio (pdf_export, 15/15); dieta RAG (hash-manifest anti re-embed + lock build_index + early-exit no-op); CORSIA NINA apprendista (night_caroselli_nina impagina i testi EP_N2 canonici, no invenzione/no GPU, task @04:35, prova del fuoco EP_N2_04 verde). ONDATA C: finetune vero (dataset 30->176 episodi Matteo-voce + --overwrite_output_dir + verifica step) + RandomDelay sui task GPU. 16 commit repo + 3 MENTE, tutti additivi/verificati. | + BACKLOG RAG CHIUSO: #7 riflusso FATTI a rotazione trimestrale (stop re-embed monolite, idempotente), #8 demote STORIE (i 3 generatori groundano sul FATTI curato, no camera d'eco), #6 sentinella doppioni _copia, #10 daily-note fuori indice. L'intero dominio RAG dell'attacco #2 e' coperto.
+**Prossimo step:** PROSSIMA (#63): risultati test LinkedIn PRE_SG_01 -> taratura PDF; export Express (con Matteo); register_night_tasks.ps1 (UAC) per RandomDelay+task caroselli; revisione bozze notturne SG@04:15+Nina@04:35; gated: app Meta, pin repo, UPS. Effetti pieni #7/#8 al restart API/incrementale notturna.
 
 ---
 
@@ -63,11 +63,11 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 ---
 
 ### Ultimi 5 milestone verificati
-- CAROSELLI a binari (NINA/SISTEMA) + scoperta ricorsiva negli script + README-segnaletica a ogni livello; QC 11 cartelle 0 falle post-riordino (15/07/2026)
-- Serie PRE Nina COMPLETA 4/4: PRE_04 'Tutto e' vero' (patto di verita' + slide PONTE, onde 31-40) + PRE_03 v6.1 volto grande in copertina; QC verde (15/07/2026 #60)
-- Apprendista notturno RODATO 3/3: EP_SG_01_03 revisionato (kicker par.7.5, caption famiglia) e promosso; coda estesa CAP 2 L'ORGANISMO 6 item con guardie esplicite (15/07/2026 #60)
-- Cammino Nina a standard: EP_N2_03 compilato su scaletta approvata (precedente per i 53) + EP_N2_01 v3/EP_N2_02 v2 (16->10, open loop corretto); regione 0 completa, TABELLONE 14/14 QC 0 falle 0 legacy; convenzione onde cammino fase 40+(N-1)*10 (15/07/2026 #60)
-- ATTACCO #2 impostato: DOCS/ATTACCO_20260716/_PIANO.md - colli di bottiglia ecosistema, 5 agenti Fable propose-only + ricognizione GitHub strumenti; P0 = verifica autogenerazione episodi->RAG + profilo GitHub (15/07/2026 #60)
+- Sessione #62: EP_SG_02_01 «V32 - il cuore che taglia» revisionato (QC verde, §7.7 slide 9 STATO REALE, slide 6 TP900+bronzine/scalini verificata grounded) e PROMOSSO in CAROSELLI/SISTEMA (S1 4/69, apre CAP 2)
+- Sessione #62 ONDATA B: pdf_export.py - un carosello.pdf per episodio (post-documento LinkedIn, canale NON-Meta), 15/15 creati; dieta RAG (hash contenuto nel manifest = stop re-embed di massa da touch + lock msvcrt su build_index + early-exit no-op)
+- Sessione #62: CORSIA NINA apprendista - night_caroselli_nina.py impagina i testi EP_N2 canonici (no invenzione, no GPU) + nina_queue.py (seed 53) + sg_builder voce parametrica/scene Nina + task TI_NightCaroselliNina @04:35; prova del fuoco EP_N2_04 verde
+- Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot
+- Sessione #62 BACKLOG RAG (attacco #2 dominio 2): #7 fatti_reflux a rotazione trimestrale (fatti_dalle_storie_YYYYQn.md, i trimestri chiusi non cambiano -> zero re-embed, verificato idempotente, 5 monoliti migrati) + #8 demote_dirs opt-in (malus selezione simmetrico al canone, wired night_caroselli/nina_agent/story_agent + /api/rag/search?demote=STORIE) + #6 check_doppioni_copia in night_audit (trova i *_copia accanto all'originale) + #10 daily-note YYYY-MM-DD fuori dall'indice (_is_nav_file). Dominio RAG dell'attacco #2 completo.
 
 ### Episodi recenti
 - *La mano che insegna alla notte*
