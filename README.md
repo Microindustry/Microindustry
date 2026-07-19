@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #136 | 19 Jul 2026 00:23
+### Stato Live — v1.1.0 | Sessione #137 | 19 Jul 2026 04:07
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -47,16 +47,16 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 <details>
 <summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati (per chi vuole i dadi e i bit)</summary>
 
-**Milestone attivo:** Sessione #65 (17/07): POSTIZ VIVO. Docker Desktop su, 8 container sani, UI localhost:4007, admin creato. App LinkedIn microindustry-postiz creata+verificata (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose. Prodotti Sign-In OIDC + Share on LinkedIn concessi. Errore redirect_uri RISOLTO (2 redirect accettati). BLOCCO: connessione Pagina richiede scope organization (w/r_organization_social, rw_organization_admin) = Community Management API, richiesta e IN ATTESA di concessione LinkedIn (muro esterno, config nostra verificata corretta). Stack STOPPATO per la notte (libera RAM notturne GPU).
+**Milestone attivo:** Sessione #66 (19/07): LANCIO SOCIAL. Identita microindustry (logo M oro + banner "COSTRUIRE MODULO A MODULO"), IG @microindustry.ms passato a Business, Pagina LinkedIn 136056455. Strategia SPLIT: LinkedIn best-first (V32 manuale lun 20/07), Meta (FB+IG) preambolo in ordine 2/sett. Scaletta 8 post Meta + 10 post Nina programmate in _SOCIAL_QUEUE (JPG rinominate 01-10). Account Nina preparato (foto profilo dal volto PRE_03, bio, coda). Notturno autonomo: generazione EP viva, coda Nina estesa a 10, 3 bozze SISTEMA (MIMS/VULCAN/GENESIS) canon-clean da approvare di giorno.
 
-**Prossimo step:** RIPRESA #66 (1 click): app LinkedIn -> Auth -> OAuth 2.0 scopes: quando compaiono i 3 organization -> docker compose start -> Postiz -> aggiungi canale LinkedIn Page -> Autorizza microindustry -> test con slides di EP_SG_02_01. Niente da rifare lato config.
+**Prossimo step:** Matteo: compilare profili IG (microindustry + creare account Nina @ilmondodinina), collegare Pagina FB, programmare i post via Business Suite; lun 20/07 caricare V32 su LinkedIn (PDF pronto). Poi approvare le 3 bozze SISTEMA.
 
 **Ultimi 5 milestone verificati:**
-- Sessione #62: CORSIA NINA apprendista - night_caroselli_nina.py impagina i testi EP_N2 canonici (no invenzione, no GPU) + nina_queue.py (seed 53) + sg_builder voce parametrica/scene Nina + task TI_NightCaroselliNina @04:35; prova del fuoco EP_N2_04 verde
 - Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot
 - Sessione #62 BACKLOG RAG (attacco #2 dominio 2): #7 fatti_reflux a rotazione trimestrale (fatti_dalle_storie_YYYYQn.md, i trimestri chiusi non cambiano -> zero re-embed, verificato idempotente, 5 monoliti migrati) + #8 demote_dirs opt-in (malus selezione simmetrico al canone, wired night_caroselli/nina_agent/story_agent + /api/rag/search?demote=STORIE) + #6 check_doppioni_copia in night_audit (trova i *_copia accanto all'originale) + #10 daily-note YYYY-MM-DD fuori dall'indice (_is_nav_file). Dominio RAG dell'attacco #2 completo.
 - Sessione #64 (17/07): Postiz montato fino al bordo (repo tools/postiz-docker-compose, JWT_SECRET generato, config in _VAULT/ACCOUNTS/postiz.md, redirect LinkedIn deciso) + WSL2+Docker Desktop 4.82 installati (manca reboot). + profilo GitHub v2.1: sintesi umana Adesso/Prossimo + dettaglio tecnico a scomparsa (<details>), canon_guard passato, additivo con fallback BRAIN/profile_public.json. + baseline LinkedIn PRE_SG_01 letto: pubblico perfetto (saldatori/metalmecc/Milano valida binario SG "parla ai pari"), engagement thin (2 reaz/0 salv) -> leva=hook, formato 4:5 a norma.
 - Sessione #65 (17/07): POSTIZ montato e VIVO (Docker Desktop 4.82, 8 container sani, UI localhost:4007, admin creato). App LinkedIn microindustry-postiz creata+VERIFICATA (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose (env confermato nel container), prodotti Sign-In OIDC + Share concessi. Errore redirect_uri RISOLTO (2 redirect accettati, diagnosi da URL reale + provider code). BLOCCO su timbro LinkedIn: pubblicare su Pagina richiede scope organization = Community Management API, richiesta e in attesa concessione (muro esterno, non config). Ripresa in 1 click quando concessa. Stack stoppato per la notte (RAM notturne GPU). Stato in _VAULT/ACCOUNTS/postiz.md.
+- Sessione #66 (19/07): LANCIO SOCIAL - identita visiva microindustry (logo/banner/kit IG in POSTER/BRAND, rigenerabili via chrome headless), IG Business, strategia SPLIT decisa, scaletta 8 post Meta (PRE_SG_01-04 + EP_SG_01_01/02/03 + EP_SG_02_01) programmata in _SOCIAL_QUEUE con JPG rinominate 01-10 (fix ordine carosello), regola caption hook+domanda+hashtag-primo-commento, tutte canon_guard.scan_public clean. Account Nina preparato (volto PRE_03 -> foto profilo, NINA_IG_PROFILO, coda 10 post ritmo buonanotte mer+dom in _SOCIAL_QUEUE_NINA). Notturno: EP gen verificata viva (bozze SISTEMA+Nina, QC ok), coda Nina estesa auto-promuovendo EP_N2_04/05/06.
 
 </details>
 
@@ -82,8 +82,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 
 ### Episodi recenti
-- *La mano che insegna alla notte*
-- *La Giuntura che Respira*
+- *Il Cartellino sulla Stoffa*
 
 ---
 
