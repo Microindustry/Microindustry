@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #137 | 19 Jul 2026 04:07
+### Stato Live — v1.1.0 | Sessione #143 | 21 Jul 2026 04:07
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -47,16 +47,16 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 <details>
 <summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati (per chi vuole i dadi e i bit)</summary>
 
-**Milestone attivo:** Sessione #66 (19/07): LANCIO SOCIAL. Identita microindustry (logo M oro + banner "COSTRUIRE MODULO A MODULO"), IG @microindustry.ms passato a Business, Pagina LinkedIn 136056455. Strategia SPLIT: LinkedIn best-first (V32 manuale lun 20/07), Meta (FB+IG) preambolo in ordine 2/sett. Scaletta 8 post Meta + 10 post Nina programmate in _SOCIAL_QUEUE (JPG rinominate 01-10). Account Nina preparato (foto profilo dal volto PRE_03, bio, coda). Notturno autonomo: generazione EP viva, coda Nina estesa a 10, 3 bozze SISTEMA (MIMS/VULCAN/GENESIS) canon-clean da approvare di giorno.
+**Milestone attivo:** Sessione #67b (20-21/07): LANCIO SOCIAL VIVO. Pagina FB 'Il Mondo di Nina' creata+collegata a @ilmondodinina.ms (coppia FB+IG); superato il labirinto Meta Business Manager (gestire come owner Matteo Mims=benenatimatteo.mb, non come i profili IG limitati). 18/21 post programmati con date certe (Business Suite pubblica in automatico): Sistema 10/11 (fino VULCAN 18/08), Nina 8/10 (fino EP_N2_04 16/08). Slide-ponte cross-profilo rigenerate (nuovo tool _render_slide.py). Sorgenti caroselli riorganizzati (EP_N2_04/05/06 _BOZZE->NINA). Restano 3 post bloccati solo dal tetto 29gg Meta, da caricare al rientro (promemoria Calendar 30/07).
 
-**Prossimo step:** Matteo: compilare profili IG (microindustry + creare account Nina @ilmondodinina), collegare Pagina FB, programmare i post via Business Suite; lun 20/07 caricare V32 su LinkedIn (PDF pronto). Poi approvare le 3 bozze SISTEMA.
+**Prossimo step:** MATTEO VIA AL MARE 7gg dal 22/07 sera (~rientro 29/07): i 18 post escono da soli. AL RIENTRO (promemoria 30/07) caricare i 3 rimasti -> 21/21: Nina EP_N2_05 (19/08) + EP_N2_06 (23/08), Sistema GENESIS EP_SG_02_04 (21/08). Caption in _NINA_/_SISTEMA_COPIA_INCOLLA.md. Poi rifiniture bio + BGE-M3 (1 click) restano aperti.
 
 **Ultimi 5 milestone verificati:**
-- Sessione #62 ONDATA C: finetune vero - episodes_to_dataset ricorsivo (30->176 episodi Matteo-voce, esclusi Nina/staging) + night_finetune --overwrite_output_dir + verifica global_step>0 (no piu' finto-verde); RandomDelay sui 3 task GPU (StoryAgent/NightResearch/FineTune) contro il MemoryError al boot
-- Sessione #62 BACKLOG RAG (attacco #2 dominio 2): #7 fatti_reflux a rotazione trimestrale (fatti_dalle_storie_YYYYQn.md, i trimestri chiusi non cambiano -> zero re-embed, verificato idempotente, 5 monoliti migrati) + #8 demote_dirs opt-in (malus selezione simmetrico al canone, wired night_caroselli/nina_agent/story_agent + /api/rag/search?demote=STORIE) + #6 check_doppioni_copia in night_audit (trova i *_copia accanto all'originale) + #10 daily-note YYYY-MM-DD fuori dall'indice (_is_nav_file). Dominio RAG dell'attacco #2 completo.
-- Sessione #64 (17/07): Postiz montato fino al bordo (repo tools/postiz-docker-compose, JWT_SECRET generato, config in _VAULT/ACCOUNTS/postiz.md, redirect LinkedIn deciso) + WSL2+Docker Desktop 4.82 installati (manca reboot). + profilo GitHub v2.1: sintesi umana Adesso/Prossimo + dettaglio tecnico a scomparsa (<details>), canon_guard passato, additivo con fallback BRAIN/profile_public.json. + baseline LinkedIn PRE_SG_01 letto: pubblico perfetto (saldatori/metalmecc/Milano valida binario SG "parla ai pari"), engagement thin (2 reaz/0 salv) -> leva=hook, formato 4:5 a norma.
-- Sessione #65 (17/07): POSTIZ montato e VIVO (Docker Desktop 4.82, 8 container sani, UI localhost:4007, admin creato). App LinkedIn microindustry-postiz creata+VERIFICATA (id 247572507, Pagina microindustry 136056455), Client ID/Secret nel compose (env confermato nel container), prodotti Sign-In OIDC + Share concessi. Errore redirect_uri RISOLTO (2 redirect accettati, diagnosi da URL reale + provider code). BLOCCO su timbro LinkedIn: pubblicare su Pagina richiede scope organization = Community Management API, richiesta e in attesa concessione (muro esterno, non config). Ripresa in 1 click quando concessa. Stack stoppato per la notte (RAM notturne GPU). Stato in _VAULT/ACCOUNTS/postiz.md.
-- Sessione #66 (19/07): LANCIO SOCIAL - identita visiva microindustry (logo/banner/kit IG in POSTER/BRAND, rigenerabili via chrome headless), IG Business, strategia SPLIT decisa, scaletta 8 post Meta (PRE_SG_01-04 + EP_SG_01_01/02/03 + EP_SG_02_01) programmata in _SOCIAL_QUEUE con JPG rinominate 01-10 (fix ordine carosello), regola caption hook+domanda+hashtag-primo-commento, tutte canon_guard.scan_public clean. Account Nina preparato (volto PRE_03 -> foto profilo, NINA_IG_PROFILO, coda 10 post ritmo buonanotte mer+dom in _SOCIAL_QUEUE_NINA). Notturno: EP gen verificata viva (bozze SISTEMA+Nina, QC ok), coda Nina estesa auto-promuovendo EP_N2_04/05/06.
+- Sessione #67: BGE-M3 preparato per lo swap - script one-click SERVICES/rebuild_rag_bge_m3.ps1 (parse OK, edita solo EMBED_MODEL, reranker intatto, --rebuild-hard per dim 384->1024, flag -Revert) + snapshot known-good chroma_db_20260720_192437; rebuild GPU esclusivo dietro UAC (Matteo, non-admin+3 watchdog)
+- Sessione #67b (20-21/07): Pagina FB 'Il Mondo di Nina' creata e collegata a @ilmondodinina.ms (coppia FB+IG in Business Suite) - superato il labirinto Meta multi-account: si gestisce come owner Matteo Mims (benenatimatteo.mb@gmail.com), non come i profili IG che sono utenti limitati (blocked_ig_user_in_mbs).
+- Sessione #67b: 18/21 caroselli programmati con date certe su 2 profili separati (Business Suite auto-pubblica). Sistema 10/11 (PRE_SG_01->V32+MIMS+VULCAN, fino 18/08, mar+ven 10:00); Nina 8/10 (PRE_01->EP_N2_04, fino 16/08, mer+dom). Restano 3 bloccati solo dal tetto 29gg (Nina EP_N2_05/06, Sistema GENESIS) -> promemoria Calendar 30/07.
+- Sessione #67b: slide-ponte cross-profilo (slide 8 di PRE_04->@microindustry.ms e PRE_SG_04->@ilmondodinina.ms) rigenerate con nuovo tool riusabile CAROSELLI/_render_slide.py (chrome headless, 1 slide 1080x1350). Verificate a occhio, ricaricate.
+- Sessione #67b: riorganizzati i sorgenti caroselli (git mv EP_N2_04/05/06 da _BOZZE/ a NINA/ perche in coda; _BOZZE = solo vere bozze). Handle corretto @ilmondodinina.ms ovunque. Doc di controllo _SCALETTA_INTERSECATA.md a moduli SEPARATI Nina/Sistema + STATO + PONTI. File copia-incolla _NINA_/_SISTEMA_COPIA_INCOLLA.md.
 
 </details>
 
@@ -82,7 +82,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 
 ### Episodi recenti
-- *Il Cartellino sulla Stoffa*
+- *La Ragnatela dei Saperi*
 
 ---
 
