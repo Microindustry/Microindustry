@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #152 | 28 Jul 2026 04:07
+### Stato Live — v1.1.0 | Sessione #154 | 29 Jul 2026 04:07
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -47,16 +47,16 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 <details>
 <summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati (per chi vuole i dadi e i bit)</summary>
 
-**Milestone attivo:** Sessione #68 (21/07): ATTACCO ECOSISTEMA su TUTTO il progetto. 5 fix applicati e verificati a 4gg (25/07): finetune torchaudio 2.6.0 nel venv isolato (era 2.11 incompatibile, WinError 127); esplosione BACKUPS 42.141->353 con tetto keep-N in retention.py (700MB liberati, solo backup gitignored, zero file di progetto toccati); spam log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable=True; 2 path hardcoded resi env-derived. + hook globale Claude Code SessionStart (auto-orientamento ogni sessione, verificato funziona). Sicurezza repo BUONA (0 segreti hardcoded). Report DOCS/ATTACCO_20260721. I fix hanno TENUTO da soli: backup a 353, audit fresco, catena notturna verde.
+**Milestone attivo:** Sessione #69 (28/07): RECUPERO ARRETRATO con 3 agenti read-only in parallelo (episodi/bozze, dashboard, critiche+proposte), Claude verificatore. FIX APPLICATI E VERIFICATI: corsia caroselli NINA sbloccata dopo 7 notti ferme (coda con EP_N2_04/05/06 ancora 'bozza_verde' benche' promossi -> tetto backlog 6>=6 falso; backlog reale 6->3); 4 episodi persi recuperati (audit_episodes match-per-titolo rimosso, story_agent riusa 'Episodio 69' -> 252->256 episodi, 0 orfani); vista RETE sorgente SISTEMA riparata (4 endpoint mancavano dal proxy vite -> tornavano index.html); troncatura episodi Nina risolta (nina_agent max_tokens 4000->8000, si perdeva l'open-loop in meta' serie); -10 critiche/notte di rumore (legenda organi_vivi=eta'-in-giorni nel SYSTEM_PROMPT + warning HF zittito in vault_intersect). RITIRATI 2 miei errori: la paginazione chromadb NON risolve il 503 (segmento HNSW incoerente: limit=10 da' 0 embedding -> cura = rag_recover --drop-hnsw, click Matteo) e i '101 bare-except' del #68 erano falsi (1 solo nel codice proprio). TROVATO problema di VERITA': MIMS descritto come software/AI in 5 episodi su 8 recenti (acronimo inventato) mentre e' meccanica - e MIMS e' il PROSSIMO progetto dopo caroselli+ecosistema.
 
-**Prossimo step:** Al RIENTRO (30/07, promemoria Calendar) caricare i 3 post rimasti -> 21/21 (Nina EP_N2_05 19/08 + EP_N2_06 23/08, Sistema GENESIS EP_SG_02_04 21/08). Poi decidere i 3 filoni PROPOSTI #68: (A) smoke-test organi vitali, (B) audit bare-except, (C) pin requirements.txt. TI_FineTune conferma il fix torchaudio al run 26/07. Da revisionare: nuovi EP_N2_58-61 + bozze prodotti dagli agenti in vacanza.
+**Prossimo step:** ATTACCARE E CORREGGERE (ordine Matteo #69): 1) fermare la contaminazione MIMS alla radice - iniettare _CANONE.md nel prompt dell'Architetto (nina_agent.py:188) con regola 'se non c'e' aggancio reale lascia vuoto' + regola canon_guard che segnala MIMS/VULCAN descritti come software; 2) correggere i 5 episodi gia' contaminati (EP_N2_57/59/60/63/64) e le fonti fabbricate nei FATTI; 3) fix meccanici residui (casella '?' in nina_rag_loop.py:180, guardia titoli unici, commit del loop Nina, sentinella canone su hash non mtime, euristiche rumorose _cid/rate-limit/open-loop/canon_guard); 4) implementare le NOVITA' IA ingegnerizzandole nel progetto; 5) bozze: 6 pronte + EP_N2_09 (slide vuota) + EP_SG_03_03 (numero vietato + open-loop all'indietro). POI: finire i caroselli, settare l'ecosistema, e partire con MIMS (prossimo progetto).
 
 **Ultimi 5 milestone verificati:**
-- Sessione #67b (20-21/07): Pagina FB 'Il Mondo di Nina' creata e collegata a @ilmondodinina.ms (coppia FB+IG in Business Suite) - superato il labirinto Meta multi-account: si gestisce come owner Matteo Mims (benenatimatteo.mb@gmail.com), non come i profili IG che sono utenti limitati (blocked_ig_user_in_mbs).
 - Sessione #67b: 18/21 caroselli programmati con date certe su 2 profili separati (Business Suite auto-pubblica). Sistema 10/11 (PRE_SG_01->V32+MIMS+VULCAN, fino 18/08, mar+ven 10:00); Nina 8/10 (PRE_01->EP_N2_04, fino 16/08, mer+dom). Restano 3 bloccati solo dal tetto 29gg (Nina EP_N2_05/06, Sistema GENESIS) -> promemoria Calendar 30/07.
 - Sessione #67b: slide-ponte cross-profilo (slide 8 di PRE_04->@microindustry.ms e PRE_SG_04->@ilmondodinina.ms) rigenerate con nuovo tool riusabile CAROSELLI/_render_slide.py (chrome headless, 1 slide 1080x1350). Verificate a occhio, ricaricate.
 - Sessione #67b: riorganizzati i sorgenti caroselli (git mv EP_N2_04/05/06 da _BOZZE/ a NINA/ perche in coda; _BOZZE = solo vere bozze). Handle corretto @ilmondodinina.ms ovunque. Doc di controllo _SCALETTA_INTERSECATA.md a moduli SEPARATI Nina/Sistema + STATO + PONTI. File copia-incolla _NINA_/_SISTEMA_COPIA_INCOLLA.md.
 - Sessione #68 (21/07): ATTACCO ECOSISTEMA tutto il progetto — 5 fix applicati/verificati (finetune torchaudio 2.6.0; BACKUPS 42k->353 keep-N in retention.py; log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable; 2 path env-derived) + hook globale SessionStart auto-orientamento; sicurezza repo 0 segreti; report DOCS/ATTACCO_20260721; verifica 25/07 i fix hanno tenuto (backup bounded, audit fresco, nightly verde).
+- Sessione #69 (28/07): RECUPERO ARRETRATO multi-agente - corsia Nina sbloccata (7 notti), 4 episodi persi recuperati (252->256, 0 orfani), vista RETE/SISTEMA riparata (proxy vite), troncatura Nina risolta (max_tokens 8000), -10 critiche/notte di rumore; verificato tsc 0 errori + storie_lint 0 violazioni; ritirati 2 miei errori (paginazione chromadb, 101 bare-except); trovato MIMS inventato come software in 5/8 episodi recenti (contamina il RAG sul prossimo progetto).
 
 </details>
 
@@ -84,7 +84,6 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 ### Episodi recenti
 - *Il Sussurratore che Indovina*
 - *La mano che insegna alla notte*
-- *Il Nodo che Respira*
 
 ---
 
