@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #156 | 17 Aug 2026 23:46
+### Stato Live — v1.1.0 | Sessione #156 | 18 Aug 2026 06:25
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -82,11 +82,8 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 
 ### Episodi recenti
+- *Il Puntino che Sussurra*
 - *Il Sussurratore che Indovina*
-- *La mano che insegna alla notte*
-- *Il Direttore Invisibile*
-- *Il Polso che Non Respira*
-- *Il Cartellino sulla Stoffa*
 
 ---
 
