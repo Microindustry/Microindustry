@@ -1,0 +1,571 @@
+diff --git a/AGENTS.md b/AGENTS.md
+new file mode 100644
+index 0000000..64bd877
+--- /dev/null
++++ b/AGENTS.md
+@@ -0,0 +1,143 @@
++# AGENTS.md — TITANIUM_OS
++
++> **Questo file è la FONTE UNICA delle regole.**
++> `CLAUDE.md`, `BRAIN/RULES.md`, `DASHBOARD/AGENTS.md` e `DASHBOARD/.cursorrules`
++> sono **derivati** da qui con `python AUTOMATIONS/tools/sync_regole.py`.
++> Per cambiare una regola si cambia questo file. Mai i derivati.
++
++Formato [AGENTS.md](https://agents.md/) — standard della Agentic AI Foundation
++(Linux Foundation), letto da Claude Code, Cursor, Copilot, Windsurf, Aider, Zed,
++VS Code e JetBrains. Gli agenti leggono il file **più vicino** nell'albero delle
++cartelle: `DASHBOARD/AGENTS.md` vince dentro `DASHBOARD/`, questo vince ovunque
++altrove. La specificità si ottiene con la cascata, **non duplicando**.
++
++---
++
++## CHE COS'È QUESTO PROGETTO
++
++TITANIUM_OS è il sistema operativo personale di Matteo Benenati — artigiano
++industriale, 15 anni di officina, costruttore della fresatrice CNC **V32**.
++Il sistema gestisce la costruzione di sé stesso (regola 5).
++
++Pilastri: **V32** (fresatrice 3 assi) · **GENESIS** (ecosistema AI) ·
++**MIMS** (sistema modulare d'acciaio) · **VITA NATURA** (centro estetico).
++
++---
++
++## LE 12 REGOLE — TITANIUM_OS OPERATING PRINCIPLES
++
++> *Un sistema che gira da solo vale più di 10 abitudini che dipendono dalla volontà.*
++
++**La numerazione 1-10 non cambia mai:** mezzo repo cita "regola N".
++
++1. **Niente è finito — ogni cosa è una versione.**
++   Non aspettare la perfezione. Una versione funzionante oggi > una versione perfetta mai.
++
++2. **Identifica → Automatizza → Scala.**
++   Se lo fai 3 volte: script. Se lo fai ogni giorno: nodo. Se il nodo produce valore: scala.
++
++3. **Cattura mentre costruisci — non ricordare, documenta.**
++   Ogni decisione tecnica in `MENTE/`. Ogni sessione Claude in `MENTE/SESSIONI/`. Il RAG la recupera domani.
++
++4. **Leva cognitiva: 1 input → N output.**
++   Un milestone → episodio + reel + LinkedIn + RAG update. Ogni azione deve produrre più artefatti.
++
++5. **Costruisci ciò che usi — meta-ricorsività.**
++   TITANIUM_OS gestisce la costruzione di TITANIUM_OS. Il sistema si autoalimenta.
++
++6. **Output misurabile prima di tutto.**
++   Se non posso misurarlo (mm, ore, euro, chunk RAG, commit), non esiste.
++
++7. **Tutto si connette — nessun silo.**
++   V32 → episodio → dataset LLM → RAG → Claude più informato su V32. Il loop è intenzionale.
++
++8. **Proteggi il sapere.**
++   `_VAULT/` per i segreti. RAG per la conoscenza. Git per il codice. Backup AES-256 per tutto.
++
++9. **Reinvesti il margine — 60% anno 1.**
++   BEP V32 = 61 ore. Ogni ora sopra il BEP è reinvestita in strumenti, formazione, scala.
++
++10. **Libertà sopra profitto.**
++    Il capannone entro 2030 non è un obiettivo lavorativo — è un obiettivo di sovranità.
++
++11. **Il sistema PROPONE, l'umano APPROVA.**
++    Nessun agente modifica codice, chiavi o canone da solo: scrive una proposta, decide Matteo.
++    *Era già legge nel codice* (`SELF_IMPROVE` propose-only, `STATE.self_improve.human_approval_required`,
++    gate `[approvazione]`) ma era stata tolta dal testo il 20/06: una regola che comanda il
++    sistema e non è scritta nella lista delle regole. Rimessa il 16/08 (#70).
++    **Eccezione a canone:** la corsia Nina è AUTO — genera e auto-promuove da sola (#44).
++
++12. **Insegna ciò che impari.**
++    Spiegare forza la chiarezza (effetto Feynman): se non sai raccontarlo, non l'hai capito.
++    Ogni concetto tecnico diventa un episodio, un carosello, un post.
++    *Recuperata da `BRAIN/RULES.md` il 16/08 (#70): era l'unica regola che viveva solo lì.
++    È il principio su cui poggia tutto il binario Nina.*
++
++---
++
++## FATTI E NON-FATTI — leggere prima di scrivere numeri
++
++Questa sezione esiste perché la sessione #70 (16/08/2026) ha dovuto rimuovere
++numeri inventati che erano stati spacciati per FATTI, e una fonte fabbricata che
++non è mai esistita. Il costo è stato una sessione intera di bonifica su 16 file.
++
++**Regole per qualunque agente che scrive su questo repo:**
++
++1. **Un numero senza misura non si scrive.** Massa, frequenza, tolleranza, resa,
++   percentuale: se non c'è una misura o un calcolo tracciabile alle spalle, non
++   entra nel testo. Meglio vuoto che inventato.
++2. **"Numero di progetto" ≠ "misura".** La qualifica fa parte del dato e non si
++   perde mai per strada, in nessun file, nemmeno in quelli che istruiscono altri
++   agenti. Numeri di progetto noti: **massa V32 178 kg**, **±0,019 mm RSS**,
++   **BEP 61 ore**, **tariffa 45 €/h**. Sorvegliati da `canon_guard.scan_public()`
++   e da `GUIDA §7.7`: mai presentati come fatti sulla superficie pubblica.
++   Scrivere "178 kg" senza "di progetto" è già una violazione.
++3. **Stato reale della V32, ad oggi:** un **telaio in piedi**, in acciaio saldato
++   TIG, corpo unico, 3 assi, con la componentistica scelta. Le prestazioni della
++   macchina le dirà la macchina quando potrà dimostrarle.
++4. **Non saldare i pilastri.** Scrivere "GENESIS/V32" come soggetto unico è
++   sempre sbagliato, qualunque verbo segua (regola strutturale `[pilastri-fusi]`).
++5. **MIMS non è software.** È il sistema modulare d'acciaio. L'ecosistema AI si
++   chiama GENESIS. Confonderli ha contaminato il RAG una volta.
++6. **Le percentuali dei pilastri sono metriche di gestione interna**, lette da
++   `BRAIN/STATE.json`. Non sono avanzamento fisico e non vanno presentate come tale.
++
++---
++
++## REGOLE CODICE (non negoziabili)
++
++Header obbligatorio in ogni file Python:
++
++```python
++# nome_modulo.py | TITANIUM_OS / NODO / SOTTOSISTEMA | vX.Y | YYYY-MM-DD
++```
++
++I path si derivano, non si scrivono a mano:
++
++```python
++BASE = Path(__file__).resolve().parents[N]     # sì
++"C:\\Users\\benen\\..."                        # MAI: rompe su altre macchine
++```
++
++---
++
++## DOVE VA OGNI FILE
++
++Non inventare percorsi. La mappa completa è in `CLAUDE.md` §FILESYSTEM,
++che è derivato da questo repo e resta la tabella di riferimento operativa.
++
++---
++
++## FONTI DI VERITÀ
++
++| Cosa | Fonte | Note |
++|------|-------|------|
++| Regole | **questo file** | tutto il resto è derivato |
++| Stato del sistema | `BRAIN/STATE.json` | verificare `last_update` prima di citarlo |
++| Cose da fare | `DA_FARE_FATTO.md` + `DATA/audit/bussola_todos.json` | la BUSSOLA |
++| Azioni non delegabili | `AZIONI_MATTEO.md` | solo Matteo |
++| Salute del sistema | `CRITICHE.md` | la cartella clinica |
++| Regole grafiche | `BRAIN/REGOLE_GRAFICHE.md` | specifiche, non duplicare qui |
++
++**Prima di citare un dato, guarda quanto è vecchio.** Un dato vecchio va
++etichettato come vecchio, mai presentato come attuale.
+diff --git a/AUTOMATIONS/tools/sync_regole.py b/AUTOMATIONS/tools/sync_regole.py
+index 7709dc7..d2929f8 100644
+--- a/AUTOMATIONS/tools/sync_regole.py
++++ b/AUTOMATIONS/tools/sync_regole.py
+@@ -1,5 +1,5 @@
+-# sync_regole.py | TITANIUM_OS / AUTOMATIONS / tools | v1.0 | 2026-08-16
+-# FONTE UNICA delle regole: CLAUDE.md. Questo script le DERIVA in BRAIN/RULES.md.
++# sync_regole.py | TITANIUM_OS / AUTOMATIONS / tools | v2.0 | 2026-08-27
++# FONTE UNICA delle regole: AGENTS.md. Questo script le DERIVA nei file figli.
+ #
+ # PERCHE' (#70): le regole vivevano in due liste scritte a mano che erano DIVERSE.
+ # CLAUDE.md aveva "Leva cognitiva 1->N" e "Output misurabile" che in RULES.md non
+@@ -9,9 +9,17 @@
+ # quindi a schermo si vedeva la lista vecchia. Stesso trattamento della Mappa in #56:
+ # DERIVA, NON COPIA.
+ #
+-# Tocca SOLO il blocco fra i marcatori: il resto di RULES.md (REGOLE SISTEMA —
+-# PDF_TO_MEMORY) resta intatto. Idempotente. --check per il gate notturno (exit 1 se
+-# il derivato non e' allineato, senza scrivere).
++# PERCHE' v2.0 (27/08): la #70 aveva unificato tre liste, ma ne restavano altre fuori
++# dal cancello — fra cui DASHBOARD/.cursorrules, che dava a un agente DIVERSO da Claude
++# un'identita' e dei "fatti" propri. AGENTS.md e' lo standard che Claude Code, Cursor,
++# Copilot, Windsurf, Aider, Zed e JetBrains leggono tutti, e vince il file piu' vicino
++# nell'albero delle cartelle: la specificita' si ottiene con la CASCATA, non duplicando.
++# Duplicare e' come e' nata la divergenza della #70.
++#
++# Tocca SOLO il blocco fra i marcatori: il resto dei file derivati resta intatto
++# (in RULES.md la sezione REGOLE SISTEMA — PDF_TO_MEMORY, in CLAUDE.md tutto il resto).
++# Idempotente. --check per il gate notturno (exit 1 se un derivato non e' allineato,
++# senza scrivere).
+ 
+ from __future__ import annotations
+ 
+@@ -21,85 +29,148 @@ from datetime import datetime
+ from pathlib import Path
+ 
+ BASE = Path(__file__).resolve().parents[2]
+-SORGENTE = BASE / "CLAUDE.md"
+-DERIVATO = BASE / "BRAIN" / "RULES.md"
++SORGENTE = BASE / "AGENTS.md"
++
++# (percorso, formato). "titoli" = un heading per regola (RULES.md, servito alla
++# dashboard). "lista" = la lista numerata verbatim, come si legge in CLAUDE.md.
++DERIVATI: list[tuple[Path, str]] = [
++    (BASE / "BRAIN" / "RULES.md", "titoli"),
++    (BASE / "CLAUDE.md", "lista"),
++]
+ 
+-INIZIO = "<!-- REGOLE:start (derivato da CLAUDE.md — non editare a mano) -->"
++INIZIO = "<!-- REGOLE:start (derivato da AGENTS.md — non editare a mano) -->"
+ FINE = "<!-- REGOLE:end -->"
+ 
+-# La sezione regole in CLAUDE.md: dal titolo "## LE N REGOLE" al successivo "## " o "---" isolato
++# Riconosce anche il marcatore v1.0 ("derivato da CLAUDE.md"), altrimenti la
++# migrazione lascerebbe due blocchi e un marcatore orfano.
++BLOCCO_RX = re.compile(r"<!-- REGOLE:start.*?<!-- REGOLE:end -->", re.S)
++
++# La sezione regole nella sorgente: dal titolo "## LE N REGOLE" al "---" successivo
+ SEZIONE_RX = re.compile(r"^##\s+LE\s+\d+\s+REGOLE.*?$(.*?)^---\s*$", re.M | re.S)
+ REGOLA_RX = re.compile(r"^(\d{1,2})\.\s+\*\*(.+?)\*\*\s*\n(.*?)(?=^\d{1,2}\.\s+\*\*|\Z)", re.M | re.S)
+ 
++TITOLO_SEZIONE = "## LE {n} REGOLE — TITANIUM_OS OPERATING PRINCIPLES"
++EPIGRAFE = "> *Un sistema che gira da solo vale più di 10 abitudini che dipendono dalla volontà.*"
++NOTA_FONTE = (
++    "**FONTE UNICA (#70, 16/08/2026 · AGENTS.md dal 27/08).** Questa lista è il canone delle\n"
++    "regole. `BRAIN/RULES.md` e questa sezione di `CLAUDE.md` non sono copie scritte a mano:\n"
++    "sono **derivate** da `AGENTS.md` con `python AUTOMATIONS/tools/sync_regole.py`.\n"
++    "Stesso principio della Mappa in #56 — *deriva, non copia*. Le 8 regole operative di\n"
++    "`DOCS/RIPASSO_S32-56.md §2` restano un documento storico (come si è lavorato tra la #32\n"
++    "e la #56), non un'altra lista.\n"
++    "La numerazione 1-10 **non cambia mai**: mezzo repo cita \"regola N\"."
++)
++
+ 
+ def estrai() -> list[tuple[str, str, str]]:
++    if not SORGENTE.exists():
++        raise SystemExit(f"ERRORE: fonte unica non trovata: {SORGENTE}")
+     testo = SORGENTE.read_text(encoding="utf-8")
+     m = SEZIONE_RX.search(testo)
+     if not m:
+-        raise SystemExit("ERRORE: sezione '## LE N REGOLE' non trovata in CLAUDE.md")
+-    return [(n, titolo.strip(), corpo.strip()) for n, titolo, corpo in REGOLA_RX.findall(m.group(1))]
+-
+-
+-def rendi(regole: list[tuple[str, str, str]]) -> str:
+-    righe = [
+-        INIZIO,
+-        "",
+-        f"# LE {len(regole)} REGOLE DELL'ECOSISTEMA",
+-        "*Vincoli operativi — ogni decisione viene filtrata qui.*",
+-        "",
+-        "> ⚠ **File DERIVATO.** La fonte unica è `CLAUDE.md` §LE REGOLE.",
+-        "> Si rigenera con `python AUTOMATIONS/tools/sync_regole.py`. Non editare a mano:",
+-        "> la prossima esecuzione sovrascrive. Per cambiare una regola, si cambia CLAUDE.md.",
+-        "",
++        raise SystemExit("ERRORE: sezione '## LE N REGOLE' non trovata in AGENTS.md")
++    regole = [(n, t.strip(), c.rstrip()) for n, t, c in REGOLA_RX.findall(m.group(1))]
++    if not regole:
++        raise SystemExit("ERRORE: nessuna regola estratta da AGENTS.md")
++    return regole
++
++
++def _piede() -> list[str]:
++    return [
+         "---",
+-        "",
++        "*Target: 15 Luglio 2030 — Matteo Benenati, 35 anni: LIBERO.*",
++        f"<!-- derivato il {datetime.now().strftime('%Y-%m-%d')} da AGENTS.md -->",
++        FINE,
++    ]
++
++
++def rendi(regole: list[tuple[str, str, str]], formato: str) -> str:
++    n = len(regole)
++    avviso = [
++        f"> ⚠ **File DERIVATO.** La fonte unica è `AGENTS.md` §LE REGOLE.",
++        "> Si rigenera con `python AUTOMATIONS/tools/sync_regole.py`. Non editare a mano:",
++        "> la prossima esecuzione sovrascrive. Per cambiare una regola, si cambia AGENTS.md.",
+     ]
+-    for n, titolo, corpo in regole:
+-        righe.append(f"## {n}. {titolo}")
++
++    if formato == "lista":
++        righe = [INIZIO, "", TITOLO_SEZIONE.format(n=n), "", EPIGRAFE, "",
++                 NOTA_FONTE, "", *avviso, ""]
++        for num, titolo, corpo in regole:
++            righe.append(f"{num}. **{titolo}**")
++            pad = " " * (len(num) + 2)   # allinea al testo dopo "N. ", anche a due cifre
++            for r in corpo.splitlines():
++                righe.append(f"{pad}{r.strip()}" if r.strip() else "")
++            righe.append("")
++        righe += _piede()
++        return "\n".join(righe)
++
++    righe = [INIZIO, "", f"# LE {n} REGOLE DELL'ECOSISTEMA",
++             "*Vincoli operativi — ogni decisione viene filtrata qui.*", "", *avviso, "", "---", ""]
++    for num, titolo, corpo in regole:
++        righe.append(f"## {num}. {titolo}")
+         for r in corpo.splitlines():
+             righe.append(r.strip())
+         righe.append("")
+-    righe += [
+-        "---",
+-        f"*Target: 15 Luglio 2030 — Matteo Benenati, 35 anni: LIBERO.*",
+-        f"<!-- derivato il {datetime.now().strftime('%Y-%m-%d')} da CLAUDE.md -->",
+-        FINE,
+-    ]
++    righe += _piede()
+     return "\n".join(righe)
+ 
+ 
+-def main() -> int:
+-    regole = estrai()
+-    blocco = rendi(regole)
+-    testo = DERIVATO.read_text(encoding="utf-8") if DERIVATO.exists() else ""
+-
+-    if INIZIO in testo and FINE in testo:
+-        nuovo = re.sub(re.escape(INIZIO) + r".*?" + re.escape(FINE), lambda _: blocco,
+-                       testo, flags=re.S)
++def aggiorna(percorso: Path, formato: str, regole) -> tuple[bool, str | None]:
++    """Ritorna (allineato, testo_nuovo). testo_nuovo e' None se non c'e' nulla da fare."""
++    if not percorso.exists():
++        return False, None
++    blocco = rendi(regole, formato)
++    testo = percorso.read_text(encoding="utf-8")
++
++    if BLOCCO_RX.search(testo):
++        nuovo = BLOCCO_RX.sub(lambda _: blocco, testo, count=1)
++    elif formato == "lista":
++        # prima esecuzione su CLAUDE.md: avvolge la sezione regole scritta a mano
++        m = SEZIONE_RX.search(testo)
++        if not m:
++            return False, None
++        fine = m.end() - len(m.group(0)) + m.group(0).rstrip().rfind("---")
++        nuovo = testo[:m.start()] + blocco + "\n\n" + testo[fine:]
+     else:
+-        # prima esecuzione: sostituisce il vecchio blocco scritto a mano (dal titolo H1
+-        # fino alla riga del target 2030), lasciando in piedi tutto il resto del file
++        # prima esecuzione su RULES.md: sostituisce il vecchio blocco a mano
+         m = re.search(r"^#\s+LE\s+\d+\s+REGOLE.*?LIBERO\.\*\s*$", testo, re.M | re.S)
+-        if m:
+-            nuovo = testo[:m.start()] + blocco + testo[m.end():]
+-        else:
+-            nuovo = blocco + "\n\n" + testo
++        nuovo = (testo[:m.start()] + blocco + testo[m.end():]) if m else blocco + "\n\n" + testo
++
++    # In RULES.md il TOC generato indicizzava solo le regole: dopo la derivazione non vale
++    # piu' e si toglie, non si mente. In CLAUDE.md invece indicizza TUTTO il file (12 sezioni):
++    # toglierlo distruggerebbe la navigazione di roba che non c'entra con le regole.
++    if formato == "titoli":
++        nuovo = re.sub(r"^<!-- TOC -->.*?^<!-- /TOC -->\s*", "", nuovo, flags=re.M | re.S)
++    return testo == nuovo, nuovo
+ 
+-    # il TOC generato non vale piu' per il blocco derivato: si toglie, non si mente
+-    nuovo = re.sub(r"^<!-- TOC -->.*?^<!-- /TOC -->\s*", "", nuovo, flags=re.M | re.S)
+ 
+-    allineato = testo == nuovo
+-    if "--check" in sys.argv:
+-        print(f"regole in CLAUDE.md: {len(regole)} · RULES.md "
+-              f"{'ALLINEATO' if allineato else 'DA RIGENERARE'}")
+-        return 0 if allineato else 1
++def main() -> int:
++    regole = estrai()
++    check = "--check" in sys.argv
++    disallineati: list[str] = []
++
++    for percorso, formato in DERIVATI:
++        rel = percorso.relative_to(BASE)
++        allineato, nuovo = aggiorna(percorso, formato, regole)
++        if nuovo is None:
++            print(f"   ATTENZIONE: {rel} non trovato o senza sezione regole — saltato")
++            continue
++        if allineato:
++            print(f"   {rel}: gia allineato")
++            continue
++        disallineati.append(str(rel))
++        if check:
++            print(f"   {rel}: DA RIGENERARE")
++        else:
++            percorso.write_text(nuovo, encoding="utf-8")
++            print(f"   {rel}: rigenerato")
+ 
+-    if not allineato:
+-        DERIVATO.write_text(nuovo, encoding="utf-8")
+-    print(f"sync_regole: {len(regole)} regole · {DERIVATO.relative_to(BASE)} "
+-          f"{'era gia allineato' if allineato else 'rigenerato'}")
++    print(f"sync_regole: {len(regole)} regole da {SORGENTE.name}")
+     for n, titolo, _ in regole:
+         print(f"   {n:>2}. {titolo}")
++
++    if check:
++        return 1 if disallineati else 0
+     return 0
+ 
+ 
+diff --git a/BRAIN/RULES.md b/BRAIN/RULES.md
+index 8fcf0c0..67d056f 100644
+--- a/BRAIN/RULES.md
++++ b/BRAIN/RULES.md
+@@ -1,11 +1,11 @@
+-<!-- REGOLE:start (derivato da CLAUDE.md — non editare a mano) -->
++<!-- REGOLE:start (derivato da AGENTS.md — non editare a mano) -->
+ 
+ # LE 12 REGOLE DELL'ECOSISTEMA
+ *Vincoli operativi — ogni decisione viene filtrata qui.*
+ 
+-> ⚠ **File DERIVATO.** La fonte unica è `CLAUDE.md` §LE REGOLE.
++> ⚠ **File DERIVATO.** La fonte unica è `AGENTS.md` §LE REGOLE.
+ > Si rigenera con `python AUTOMATIONS/tools/sync_regole.py`. Non editare a mano:
+-> la prossima esecuzione sovrascrive. Per cambiare una regola, si cambia CLAUDE.md.
++> la prossima esecuzione sovrascrive. Per cambiare una regola, si cambia AGENTS.md.
+ 
+ ---
+ 
+@@ -54,7 +54,7 @@ Ogni concetto tecnico diventa un episodio, un carosello, un post.
+ 
+ ---
+ *Target: 15 Luglio 2030 — Matteo Benenati, 35 anni: LIBERO.*
+-<!-- derivato il 2026-08-16 da CLAUDE.md -->
++<!-- derivato il 2026-08-27 da AGENTS.md -->
+ <!-- REGOLE:end -->
+ ---
+ 
+diff --git a/CLAUDE.md b/CLAUDE.md
+index a1a7516..292f147 100644
+--- a/CLAUDE.md
++++ b/CLAUDE.md
+@@ -158,17 +158,24 @@ Usa `rag-rebuild` solo per reset completo (es. cambio chunk config). RAG v4.0:
+ 
+ ---
+ 
++<!-- REGOLE:start (derivato da AGENTS.md — non editare a mano) -->
++
+ ## LE 12 REGOLE — TITANIUM_OS OPERATING PRINCIPLES
+ 
+ > *Un sistema che gira da solo vale più di 10 abitudini che dipendono dalla volontà.*
+ 
+-**FONTE UNICA (#70, 16/08/2026).** Questa lista è il canone delle regole. `BRAIN/RULES.md`
+-non è più una seconda copia scritta a mano: è **derivato** da qui con
+-`python AUTOMATIONS/tools/sync_regole.py`. Stesso principio della Mappa in #56 —
+-*deriva, non copia*. Le 8 regole operative di `DOCS/RIPASSO_S32-56.md §2` restano un
+-documento storico (come si è lavorato tra la #32 e la #56), non una terza lista.
++**FONTE UNICA (#70, 16/08/2026 · AGENTS.md dal 27/08).** Questa lista è il canone delle
++regole. `BRAIN/RULES.md` e questa sezione di `CLAUDE.md` non sono copie scritte a mano:
++sono **derivate** da `AGENTS.md` con `python AUTOMATIONS/tools/sync_regole.py`.
++Stesso principio della Mappa in #56 — *deriva, non copia*. Le 8 regole operative di
++`DOCS/RIPASSO_S32-56.md §2` restano un documento storico (come si è lavorato tra la #32
++e la #56), non un'altra lista.
+ La numerazione 1-10 **non cambia mai**: mezzo repo cita "regola N".
+ 
++> ⚠ **File DERIVATO.** La fonte unica è `AGENTS.md` §LE REGOLE.
++> Si rigenera con `python AUTOMATIONS/tools/sync_regole.py`. Non editare a mano:
++> la prossima esecuzione sovrascrive. Per cambiare una regola, si cambia AGENTS.md.
++
+ 1. **Niente è finito — ogni cosa è una versione.**
+    Non aspettare la perfezione. Una versione funzionante oggi > una versione perfetta mai.
+ 
+@@ -212,6 +219,11 @@ La numerazione 1-10 **non cambia mai**: mezzo repo cita "regola N".
+     *Recuperata da `BRAIN/RULES.md` il 16/08 (#70): era l'unica regola che viveva solo lì.
+     È il principio su cui poggia tutto il binario Nina.*
+ 
++---
++*Target: 15 Luglio 2030 — Matteo Benenati, 35 anni: LIBERO.*
++<!-- derivato il 2026-08-27 da AGENTS.md -->
++<!-- REGOLE:end -->
++
+ ---
+ 
+ ## SETUP MACCHINA (fissa DESKTOP-IFACE2R)
+diff --git a/DASHBOARD/.cursorrules b/DASHBOARD/.cursorrules
+index 95ca1a0..a389533 100644
+--- a/DASHBOARD/.cursorrules
++++ b/DASHBOARD/.cursorrules
+@@ -1,27 +1,14 @@
+-# TITANIUM PROJECT RULES
+-
+-You are the Lead Engineer for Titanium Ventures. 
+-Your goal is to build the "ASSOLUTO V3.0" Dashboard based on the Titanium Manifesto.
+-
+-## TECH STACK
+-- Framework: React + Vite (TypeScript)
+-- Styling: Tailwind CSS (Mobile First)
+-- Icons: Lucide React
+-- Tone: Industrial, Cyberpunk, Minimalist, High-Contrast (Black/Zinc/Blue)
+-
+-## CODING STANDARDS
+-1. **Hyper-Componentization**: Never write huge files. If a component exceeds 100 lines, suggest breaking it down.
+-2. **Type Safety**: Always use TypeScript interfaces for Props. No "any".
+-3. **Performance**: Use functional components.
+-4. **UI/UX**: The design must feel "Heavy" and "Precision-Engineered" (like CNC machinery). Use zinc-950 backgrounds, zinc-800 borders.
+-
+-## PROJECT CONTEXT (THE TRUTH)
+-- **Titanium V32**: A CNC machine built with Epoxy Granite. Critical stats: 178kg mass, 3.83Hz nat freq.
+-- **EVA**: The economic engine. Tracks "Parts Sold" (MIMS) and "Machine Time".
+-- **MIMS**: Modular Industrial Mounting System. 40x40mm matrix.
+-- **Goal**: "Libertà Industriale" by 2030 (The Warehouse).
+-
+-## BEHAVIOR
+-- Be concise. Give me the code, not the lecture.
+-- When I ask to "Fix", assume I want the most robust, long-term solution.
+-- Always check if `lucide-react` icons are imported correctly before finishing.
+\ No newline at end of file
++# DERIVATO — non editare a mano.
++# Fonte unica: /AGENTS.md (radice) + /DASHBOARD/AGENTS.md
++# Rigenerato da: python AUTOMATIONS/tools/sync_regole.py
++#
++# Le regole di questo progetto stanno in AGENTS.md, che Cursor legge
++# nativamente. Questo file resta solo per le versioni di Cursor che
++# cercano ancora .cursorrules.
++#
++# NON scrivere qui numeri, materiali o prestazioni della V32.
++# I fatti verificati, con la loro qualifica ("di progetto" vs misurato),
++# stanno in /AGENTS.md §FATTI E NON-FATTI.
++# Questo file conteneva "178kg mass, 3.83Hz nat freq" sotto il titolo
++# "THE TRUTH", senza la qualifica "di progetto" che CLAUDE.md porta e che
++# GUIDA §7.7 impone — e canon_guard non scansiona qui.
+diff --git a/DASHBOARD/AGENTS.md b/DASHBOARD/AGENTS.md
+new file mode 100644
+index 0000000..6bd7c11
+--- /dev/null
++++ b/DASHBOARD/AGENTS.md
+@@ -0,0 +1,60 @@
++# AGENTS.md — DASHBOARD
++
++> Va salvato come `DASHBOARD/AGENTS.md`.
++> Vale **solo dentro `DASHBOARD/`**. Per tutto il resto — le 12 regole, i fatti,
++> le regole codice — vince `/AGENTS.md` alla radice, che questo file **non ripete
++> e non contraddice**.
++>
++> Sostituisce `DASHBOARD/.cursorrules`. Vedi `MIGRAZIONE.md` §3 per il motivo:
++> quel file conteneva numeri non verificati presentati come "THE TRUTH".
++
++---
++
++## STACK
++
++- Framework: React + Vite (TypeScript)
++- Styling: Tailwind CSS, mobile first
++- Icone: Lucide React
++- Tono: industriale, minimalista, ad alto contrasto
++
++## STANDARD DI CODICE
++
++1. **Iper-componentizzazione.** Nessun file enorme. Oltre le 100 righe, proponi
++   di spezzare il componente.
++2. **Type safety.** Interfacce TypeScript per le props. Mai `any`.
++3. **Componenti funzionali.**
++4. **Peso visivo.** Il design deve sembrare costruito, non disegnato: fondi
++   `zinc-950`, bordi `zinc-800`.
++
++## PALETTE E ICONE
++
++Non decidere a gusto: la palette e la lingua delle icone sono già state fissate
++contando l'uso reale su 68 file nella sessione #70. La fonte è
++`BRAIN/REGOLE_GRAFICHE.md` — leggila prima di introdurre un colore nuovo.
++
++In sintesi: base `slate`, accenti `emerald / cyan / amber / indigo / rose` + `red`.
++Ritirati: `zinc` come accento, `green`, `sky`, `yellow`, `violet`, `pink`.
++Le icone `lucide` sono la lingua dell'**interfaccia**; le emoji stanno solo nel
++**contenuto**. Applicazione additiva: non ridipingere ciò che già funziona.
++
++## DATI — da dove vengono
++
++La dashboard non inventa numeri e non li scrive in chiaro nel codice. Legge:
++
++| Vista | Fonte |
++|-------|-------|
++| Stato sistema | `BRAIN/STATE.json` |
++| Bussola (da fare / fatto) | `GET /api/bussola/todos`, rigenerato dal night_audit |
++| Critiche | `CRITICHE.md` |
++| Regole servite in UI | `BRAIN/RULES.md` (derivato) |
++
++**Se un dato non arriva da una di queste fonti, non va mostrato come dato.**
++Uno stato vuoto onesto vale più di un numero segnaposto: un numero finto in una
++dashboard diventa vero il giorno dopo, quando qualcuno lo cita.
++
++## COMPORTAMENTO
++
++- Conciso. Il codice, non la lezione.
++- "Fix" significa la soluzione robusta e duratura, non la pezza.
++- Verifica che le icone `lucide-react` siano importate correttamente prima di chiudere.
++- Vale la regola 11: **il sistema propone, l'umano approva.**

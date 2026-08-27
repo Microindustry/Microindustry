@@ -192,3 +192,74 @@ DASHBOARD/src/data/sistema_linea_guida.md
 
 `BRAIN/REGOLE_GRAFICHE.md` **non** va fuso: è legittimamente specifico ed è già
 richiamato da `DASHBOARD/AGENTS.md`.
+
+---
+
+## 7. AGGIORNAMENTO 27/08 — la patch esiste ed è stata provata
+
+I §4 e §5 qui sopra descrivevano la migrazione a parole. **Ora è codice, costruito
+ed eseguito sul clone reale di TITANIUM_OS.**
+
+### Il file
+
+```
+proposta-regole/migrazione-agents-md.patch     571 righe, 6 file
+```
+
+| File | Cosa cambia |
+|---|---|
+| `AGENTS.md` | **nuovo** — fonte unica, 143 righe |
+| `DASHBOARD/AGENTS.md` | **nuovo** — regole dashboard, 60 righe |
+| `AUTOMATIONS/tools/sync_regole.py` | v1.0 → v2.0: sorgente AGENTS.md, lista di derivati, due formati di resa |
+| `CLAUDE.md` | la sezione regole diventa derivata, fra marcatori |
+| `BRAIN/RULES.md` | marcatori aggiornati, resta derivato come prima |
+| `DASHBOARD/.cursorrules` | sostituito da un puntatore, senza numeri |
+
+### Come si applica
+
+```bash
+cd <percorso-TITANIUM_OS>
+git checkout -b claude/regole-agents-md
+git apply migrazione-agents-md.patch
+python AUTOMATIONS/tools/sync_regole.py --check    # deve uscire 0
+```
+
+### Cosa ho verificato davvero, non a occhio
+
+- `py_compile` sullo script: OK.
+- Prima esecuzione: rigenera entrambi i derivati.
+- Seconda esecuzione: *"già allineato"* su entrambi → **idempotente**.
+- `--check`: **exit 0**.
+- **12 regole** presenti sia in `CLAUDE.md` sia in `BRAIN/RULES.md`.
+- Le **annotazioni storiche delle regole 11 e 12** — quelle che la #70 aveva
+  faticato a recuperare — sopravvivono in entrambi i derivati.
+- Il **TOC di `CLAUDE.md` resta intatto**.
+- Patch applicata da capo su un repo pulito: `git apply --check` OK, e il gate
+  passa anche dopo la riapplicazione.
+
+### Tre difetti che ho trovato provandola, e corretto
+
+Li scrivo perché sarebbero passati inosservati fino al PC.
+
+1. **Spogliavo `CLAUDE.md` del suo TOC.** Il `re.sub` che toglie il TOC era stato
+   scritto per `RULES.md`, dove l'indice copriva solo le regole. In `CLAUDE.md`
+   l'indice copre **tutte e 12 le sezioni**: toglierlo distruggeva la navigazione
+   di roba che non c'entra niente con le regole. Ora la rimozione avviene solo sui
+   derivati in formato `titoli`.
+2. **Il mio `AGENTS.md` aveva tagliato le annotazioni delle regole 11 e 12** — la
+   nota su `SELF_IMPROVE` propose-only e quella sul recupero da `RULES.md`. Cioè
+   esattamente il testo che la #70 aveva rimesso dopo che era sparito il 20/06.
+   Ripristinato integralmente.
+3. **Indentazione e accenti.** Le regole a due cifre usano 4 spazi, non 3, e
+   l'epigrafe l'avevo riscritta con gli apostrofi (`piu'`, `volonta'`) invece degli
+   accenti. Ora l'indentazione si calcola dalla larghezza del numero e il testo è
+   quello originale.
+
+**Un falso allarme, per onestà:** avevo scritto che `CLAUDE.md` perdeva una
+sezione `##`. Non era vero — avevo contato male io. Il diff delle intestazioni è
+vuoto: sono identiche.
+
+### Cosa NON contiene
+
+La classificazione delle altre sedi di regole (§6). Quelle vanno guardate una per
+una insieme: non è lavoro da patch.
