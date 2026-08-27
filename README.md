@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v1.1.0 | Sessione #160 | 26 Aug 2026 14:59
+### Stato Live — v3.0.0 · +647 commit | Sessione #162 | 27 Aug 2026 17:17
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -40,16 +40,16 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 | **MIMS** (sistema modulare d'acciaio) | `███░░░░░░░ 30%` | Attende la pressa VULCAN |
 | **VITA NATURA** (centro estetico) | `████░░░░░░ 40%` | Attivo |
 
-**Adesso** — Il sistema ha iniziato a consegnare da solo. Di notte produce i caroselli, li controlla con un QC automatico e li impagina per i social; la prima uscita pubblica su LinkedIn è andata. Il lavoro non lo devo più ricordare: si documenta e si racconta da sé.
+**Adesso** — Il sistema si mantiene da solo. Di notte scrive gli episodi, si fa l'audit, si ripara e committa: dieci notti su undici senza che io tocchi niente. E soprattutto ha imparato a controllare se stesso — quando raccontava di sé qualcosa di falso, ora c'è una guardia che lo ferma prima che finisca in pubblico. Un sistema che si accorge dei propri errori vale piu' di uno che non ne fa mai perche' non prova.
 
-**Prossimo** — Pubblicazione completamente automatica — un episodio finito diventa un post LinkedIn senza tocco umano (Postiz self-hosted, collegato via autorizzazione sicura, non con password).
+**Prossimo** — Dare a GENESIS un organigramma vero. Gli agenti che lavorano di notte esistono gia', ma vivevano sparsi tra file e cartelle: adesso hanno un database che li tiene in albero, con un solo posto da cui si interroga. Il passo dopo e' vederli nella dashboard come si guarda un reparto in officina: chi fa cosa, chi risponde a chi, cosa e' acceso adesso.
 
 <details>
 <summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati (per chi vuole i dadi e i bit)</summary>
 
-**Milestone attivo:** Sessione #70 (16/08): BONIFICA CONTAMINAZIONE MIMS + SCALA GENESIS S0-S2. Scoperto che A1/A2 erano gia' fatti dal commit a77256f3 del 28/07 (sorgente chiusa da 19 giorni): non rifatti, verificati. A3 era il pezzo vero aperto -> canon_guard su 64 EP_N2 vivi ha trovato 8 episodi sporchi (i 5 in lista 57/59/60/63/64 + 3 fuori lista 01/13/52); nuovo tool AUTOMATIONS/tools/fix_pilastri_software.py ha applicato 40 sostituzioni su 16 file (repo + specchio MENTE, che e' quello che il RAG rilegge): MIMS-come-software -> GENESIS, rimossa la fonte FABBRICATA 'GENESIS/documentation_hallucination_2026' (non esiste), tolti 2 numeri inventati spacciati per FATTI (40-60% false credenze, sarta 1 su 1.000), corretta la falla [persone] di EP_N2_63 (dava una figlia a una bambina). VERIFICA: canon_guard 0 righe sugli episodi vivi + test di non-regressione dell'Architetto sui 2 concetti incriminati = entrambi agganciati a GENESIS, 0 violazioni. B: B3 era davvero aperto (run_story_agent committa solo S2_SISTEMA, la corsia Nina non l'ha mai committata nessuna automazione) -> commit aggiunto in night_research.bat; B4 sentinella canone ora su HASH del contenuto (DATA/audit/content_age.json: un touch non ringiovanisce piu' il canone); B5 firma stabile _sig() sul _cid. RITIRATO un numero del #69: '_cid = 6 cloni/notte' non regge sui dati (0 cloni a similarita' 0.80 su 261 critiche; a soglia bassa il merge fonde problemi DIVERSI) -> niente merge fuzzy, nasconderebbe guasti veri. C: SCALA-GENESIS.md ricreato (era scritto nella #69 ma mai salvato) e saliti 3 gradini: S0 FounderOS gira su :4100 (aggirato better-sqlite3/Node24 senza VS Build Tools), S1 CORE/genesis_db.py 8 tabelle + parent_id ricorsivo + costo nel run + FK attive, S2 CORE/genesis_seed.py idempotente (6 dipartimenti, 12 agenti veri, 7 tool con campo 'probe'), albero restituito da una CTE ricorsiva. TROVATO: il sistema e' stato MUTO dal 30/07 al 15/08 (17 notti, 0 commit automatici) - va riacceso.
+**Milestone attivo:** Sessione #71 (27/08): SMENTITO l'handoff. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11 (night_audit, inventario, nina_rag_loop, story_agent). API :5001 non e' giu': 17 endpoint su 18 danno 200; md-files non e' rotto ma lento (4,0s); il RAG e' rientro non perdita (21.630 il 16/08 -> 22.637 il 26/08, sale). GUASTO VERO trovato: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era TRONCATO a meta' scrittura; la radice e' md_view_pipeline._update_index che riscriveva l'indice INTERO in modo non atomico a ogni singolo file (487 finestre di corruzione, O(n^2)) -> scrittura atomica tmp+fsync+os.replace con retry Windows, indice tollerante al file corrotto, rebuild che scrive UNA volta sola. Indice ricostruito: 487 view, endpoint 200. canon_guard non era nemmeno eseguibile a mano (UnicodeEncodeError su console cp1252): stdout in utf-8, stesso fix su genesis_seed --albero (mai arrivato in fondo). Igiene: _VAULT escluso dalla view pipeline (generava view di CREDENZIALI_BACKUP.md servite dall'API; nessun leak in git, entrambi gitignorati). BATCH 3 GRUPPO 1 applicato dopo aver letto le frasi in contesto: 10 episodi (16/19/35/38/41/53/54/62 + 10 e 44 che il tool non copriva, variante GENESIS/TITANIUM_OS), 25 sostituzioni, idempotente, 0 bloccati dalla guardia carosello. GATE canone: da 22 righe a 8, e le 8 sono esattamente i 7 episodi sospesi. S3 CHIUSO: CORE/repos.py, grep SELECT fuori = 0.
 
-**Prossimo step:** 1) RIACCENDERE IL SISTEMA: nina-loop, snapshot RAG, retention, inventario notturno e AI news watcher fermi da 17,5 giorni; API :5001 GIU' (dashboard gira ma 7 endpoint su 9 danno 500); RAG a 21.630 chunk (era ~32.800 il 24/06) - capire se e' rientro post-rebuild o perdita. 2) BATCH 3 (decisione Matteo, dry-run pronto, 0 bloccati dalla guardia): NON e' un blocco unico ma 3 gruppi - 10 episodi = correzione sicura; 4 da GIUDICARE (03/05/48/56, li' V32 non e' un'invenzione: ripetibilita' e calibrazione sono meccanica, e il 48 resterebbe sgrammaticato); 2 ROTTI non sporchi (EP_N2_28 e 55: Aggancio reale TRONCATO a meta' parola, residuo del bug max_tokens pre-#69, vanno RIGENERATI non rattoppati). 3) SCALA: S3 repository layer (chiude quando grep SELECT fuori da repos.py = 0). 4) SOCIAL: EP_N2_04 uscito il 16/08 alle ~09:00 invece che alle 21:00, capire perche'. NB canon_guard segnala 22 righe (non 0): il rilevatore e' stato riparato, il gate e' ambra fino al batch 3.
+**Prossimo step:** 1) SOSPESI del batch 3 (decide Matteo): per 03/05/46/48/56 il collasso generico su GENESIS e' SBAGLIATO - non ripulisce, sposta il falso dal pilastro meccanico a quello software (ripetibilita'/calibrazione = V32; golden template = MIMS/VULCAN; il 48 diventa sgrammaticato; il 46 e' misto). Proposta: 5 riscritture mirate, una frase l'una. 2) EP_N2_28 e 55 da RIGENERARE (troncati a meta' parola, confermato leggendoli). 3) EP_N2_16: due numeri inventati spacciati per FATTI ('70% dell'affidabilita'', 'errori da 10% a 2-3%') che la regola generica non vede. 4) S4 della scala: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI). 5) Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili. 6) Push: 2 commit automatici del 26/08 + i fix di questa sessione, non ancora committati.
 
 **Ultimi 5 milestone verificati:**
 - Sessione #68 (21/07): ATTACCO ECOSISTEMA tutto il progetto — 5 fix applicati/verificati (finetune torchaudio 2.6.0; BACKUPS 42k->353 keep-N in retention.py; log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable; 2 path env-derived) + hook globale SessionStart auto-orientamento; sicurezza repo 0 segreti; report DOCS/ATTACCO_20260721; verifica 25/07 i fix hanno tenuto (backup bounded, audit fresco, nightly verde).
@@ -66,7 +66,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 | Nodo | Descrizione |
 |------|-------------|
-| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — ~19.600 chunk, si aggiorna da solo a ogni modifica |
+| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — ~22.637 chunk, si aggiorna da solo a ogni modifica |
 | `Story Agent` | Milestone verificato → episodio narrativo (02:07 ogni notte) — il lavoro si documenta da solo |
 | `Nina Agent` | Il binario educativo: favole vere generate a 2 stadi con grounding RAG |
 | `Apprendista notturno` | Bozze di caroselli Instagram in quarantena (@04:15) — QC automatico + canon_guard, promozione solo umana di giorno |
@@ -82,8 +82,11 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 
 ### Episodi recenti
-- *Il Segno che Rimane*
-- *Il Ticchettio che Salva*
+- *Il Turno di Guardia*
+- *Il Grande Loop: quando il gesto rimane*
+- *Il Nodo che Respira*
+- *Il Dito che Insegna*
+- *Il Direttore Invisibile*
 
 ---
 
