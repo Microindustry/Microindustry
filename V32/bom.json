@@ -1,0 +1,29 @@
+{
+  "progetto": "V32",
+  "descrizione": "Fresatrice CNC 3 assi - corpo unico acciaio saldato TIG",
+  "config": "G (gusset + rinforzi colonne Z+U)",
+  "aggiornato": "2026-09-03",
+  "sessione_rilevazione": "foto componenti disponibili - Matteo",
+  "legenda": {
+    "fonte": {
+      "foto": "letto da foto del componente reale",
+      "misurato": "misurato fisicamente da me",
+      "datasheet": "da scheda tecnica del produttore",
+      "dichiarato": "detto a voce, NON verificato"
+    },
+    "stato": ["disponibile", "installato", "da_comprare", "da_verificare", "scartato"],
+    "confidenza": ["certa", "probabile", "da_confermare"]
+  },
+  "sottosistemi": [
+    "TELAIO", "ASSE_X", "ASSE_Y", "ASSE_Z", "MANDRINO", "TRASMISSIONE",
+    "GUIDE", "MOTORI", "DRIVER", "CONTROLLO", "ELETTRICO",
+    "RAFFREDDAMENTO", "LUBRIFICAZIONE", "SICUREZZA", "ACCESSORI"
+  ],
+  "componenti": [],
+  "buchi_noti": [
+    "CONTROLLO: nessun controller/PLC identificato",
+    "DRIVER: nessun driver identificato",
+    "MANDRINO: non identificato",
+    "ELETTRICO: quadro non definito"
+  ]
+}
