@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v3.0.0 · +688 commit | Sessione #165 | 27 Sep 2026 11:09
+### Stato Live — v3.0.0 · +695 commit | Sessione #172 | 28 Sep 2026 13:06
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -47,9 +47,9 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 <details>
 <summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati (per chi vuole i dadi e i bit)</summary>
 
-**Milestone attivo:** Sessione #71 (27/08): SMENTITO l'handoff. Il sistema NON era spento: si e' riacceso da solo il 17/08 e ha lavorato 10 notti su 11 (night_audit, inventario, nina_rag_loop, story_agent). API :5001 non e' giu': 17 endpoint su 18 danno 200; md-files non e' rotto ma lento (4,0s); il RAG e' rientro non perdita (21.630 il 16/08 -> 22.637 il 26/08, sale). GUASTO VERO trovato: /api/view-index dava 500 dal 20/08 perche' DATA/view_index.json era TRONCATO a meta' scrittura; la radice e' md_view_pipeline._update_index che riscriveva l'indice INTERO in modo non atomico a ogni singolo file (487 finestre di corruzione, O(n^2)) -> scrittura atomica tmp+fsync+os.replace con retry Windows, indice tollerante al file corrotto, rebuild che scrive UNA volta sola. Indice ricostruito: 487 view, endpoint 200. canon_guard non era nemmeno eseguibile a mano (UnicodeEncodeError su console cp1252): stdout in utf-8, stesso fix su genesis_seed --albero (mai arrivato in fondo). Igiene: _VAULT escluso dalla view pipeline (generava view di CREDENZIALI_BACKUP.md servite dall'API; nessun leak in git, entrambi gitignorati). BATCH 3 GRUPPO 1 applicato dopo aver letto le frasi in contesto: 10 episodi (16/19/35/38/41/53/54/62 + 10 e 44 che il tool non copriva, variante GENESIS/TITANIUM_OS), 25 sostituzioni, idempotente, 0 bloccati dalla guardia carosello. GATE canone: da 22 righe a 8, e le 8 sono esattamente i 7 episodi sospesi. S3 CHIUSO: CORE/repos.py, grep SELECT fuori = 0.
+**Milestone attivo:** #73: P0 e P1 chiusi - strumenti che orientano veri, canone Nina a zero falsi, agganci controllati
 
-**Prossimo step:** 1) SOSPESI del batch 3 (decide Matteo): per 03/05/46/48/56 il collasso generico su GENESIS e' SBAGLIATO - non ripulisce, sposta il falso dal pilastro meccanico a quello software (ripetibilita'/calibrazione = V32; golden template = MIMS/VULCAN; il 48 diventa sgrammaticato; il 46 e' misto). Proposta: 5 riscritture mirate, una frase l'una. 2) EP_N2_28 e 55 da RIGENERARE (troncati a meta' parola, confermato leggendoli). 3) EP_N2_16: due numeri inventati spacciati per FATTI ('70% dell'affidabilita'', 'errori da 10% a 2-3%') che la regola generica non vede. 4) S4 della scala: organigramma dal db in DASHBOARD (oggi l'albero si vede solo da CLI). 5) Igiene notturna arretrata (night_audit 26/08): critiche stantie da 49gg, _CANONE.md fermo a EP_N2_64 mentre su disco c'e' il 67, AI news watcher muto da 4 giorni, 8 CVE fixabili. 6) Push: 2 commit automatici del 26/08 + i fix di questa sessione, non ancora committati.
+**Prossimo step:** #74: prima ANALIZZARE (viste, dati, bisogni di MIMS/fresa/VULCAN), poi unita' grafica + mappa a rami
 
 **Ultimi 5 milestone verificati:**
 - Sessione #68 (21/07): ATTACCO ECOSISTEMA tutto il progetto — 5 fix applicati/verificati (finetune torchaudio 2.6.0; BACKUPS 42k->353 keep-N in retention.py; log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable; 2 path env-derived) + hook globale SessionStart auto-orientamento; sicurezza repo 0 segreti; report DOCS/ATTACCO_20260721; verifica 25/07 i fix hanno tenuto (backup bounded, audit fresco, nightly verde).
@@ -82,11 +82,11 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 
 ### Episodi recenti
-- *Il Turno di Guardia*
-- *Il Grande Loop: quando il gesto rimane*
-- *Il Nodo che Respira*
-- *Il Dito che Insegna*
-- *Il Direttore Invisibile*
+- *Il Diario che Pensa*
+- *La Giuntura che Respira*
+- *Il Libro delle Ricette di Nonna*
+- *La mano che insegna alla notte*
+- *Le Mani Prima dei Rulli*
 
 ---
 
