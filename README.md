@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v3.0.0 · +695 commit | Sessione #172 | 28 Sep 2026 13:06
+### Stato Live — v3.0.0 · +701 commit | Sessione #173 | 29 Sep 2026 13:08
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -47,16 +47,16 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 <details>
 <summary>🔩 Dettaglio tecnico — milestone attivo e ultimi lavori verificati (per chi vuole i dadi e i bit)</summary>
 
-**Milestone attivo:** #73: P0 e P1 chiusi - strumenti che orientano veri, canone Nina a zero falsi, agganci controllati
+**Milestone attivo:** #74: analisi del rifacimento grafico;
 
-**Prossimo step:** #74: prima ANALIZZARE (viste, dati, bisogni di MIMS/fresa/VULCAN), poi unita' grafica + mappa a rami
+**Prossimo step:** Pulizia della dashboard (codice morto, 11 dipendenze), poi la fonte dati del ferro: l'API legge distinte, MENTE e FOTO
 
 **Ultimi 5 milestone verificati:**
-- Sessione #68 (21/07): ATTACCO ECOSISTEMA tutto il progetto — 5 fix applicati/verificati (finetune torchaudio 2.6.0; BACKUPS 42k->353 keep-N in retention.py; log werkzeug->WARNING; TI_NightCaroselli StartWhenAvailable; 2 path env-derived) + hook globale SessionStart auto-orientamento; sicurezza repo 0 segreti; report DOCS/ATTACCO_20260721; verifica 25/07 i fix hanno tenuto (backup bounded, audit fresco, nightly verde).
-- Sessione #69 (28/07): RECUPERO ARRETRATO multi-agente - corsia Nina sbloccata (7 notti), 4 episodi persi recuperati (252->256, 0 orfani), vista RETE/SISTEMA riparata (proxy vite), troncatura Nina risolta (max_tokens 8000), -10 critiche/notte di rumore; verificato tsc 0 errori + storie_lint 0 violazioni; ritirati 2 miei errori (paginazione chromadb, 101 bare-except); trovato MIMS inventato come software in 5/8 episodi recenti (contamina il RAG sul prossimo progetto).
-- Sessione #70 (16/08): contaminazione MIMS bonificata alla radice E nello storico - 8 episodi/16 file puliti (repo + MENTE), fonte fabbricata e numeri inventati rimossi, canon_guard 0 su tutti gli EP_N2 vivi, test di non-regressione VERDE; B3/B4/B5 chiusi (commit corsia Nina, sentinella su hash del contenuto, firma stabile delle critiche); ritirato il numero '6 cloni/notte' del #69 perche' non reggeva sui dati; SCALA-GENESIS.md ricreato e saliti S0-S1-S2 (FounderOS gira, genesis_db 8 tabelle, seed idempotente con albero da CTE ricorsiva). Verifiche: tsc -b 0 errori, py_compile 6/6, storie_lint 0 violazioni, 258 episodi 258 id unici.
 - Sessione #70 (16/08): REGOLE unificate - erano 3 liste DIVERGENTI (CLAUDE.md, BRAIN/RULES.md fermo al 02/06 e servito alla dashboard, RIPASSO_S32-56) con numerazione sfasata: 'regola 6' voleva dire due cose diverse. Ora CLAUDE.md e' fonte unica a 12 regole (1-10 INVARIATE perche' mezzo repo le cita; +11 'il sistema propone, l'umano approva' rimessa nel testo dopo essere stata tolta il 20/06 pur restando legge nel codice e persino pubblicata in un episodio; +12 'insegna cio' che impari' recuperata da RULES.md dov'era l'unica regola viva). RULES.md ora DERIVATO via AUTOMATIONS/tools/sync_regole.py (marcatori, la sezione PDF_TO_MEMORY resta intatta, --check per il gate). Tappata la RADICE: setup.py:539 riscriveva RULES.md con la lista vecchia a ogni esecuzione. + BRAIN/REGOLE_GRAFICHE.md: le 2 regole rimandate a 'da fare insieme' dalla #57 finalmente scritte, decise contando l'uso reale su 68 file - palette slate + emerald/cyan/amber/indigo/rose + red, doppioni ritirati (zinc/green/sky/yellow/violet/pink), applicazione ADDITIVA senza repaint; lingua icone lucide=interfaccia (41 file su 68 gia' cosi'), emoji=solo contenuto, le frecce -> sono tipografia (261 delle 523 occorrenze). Servito anche alla dashboard. tsc -b verde.
 - Sessione #70 (16/08) VERIFICA FINALE: ritirata la mia dichiarazione che A3 fosse chiuso - il gate era verde perche' canon_guard era CIECO, non perche' la contaminazione fosse finita (EP_N2_03/19/41/54 dicevano la stessa falsita' con parole fuori lista). Curato alla radice con una regola STRUTTURALE [pilastri-fusi]: la barra in GENESIS/V32 salda i pilastri in un soggetto solo ed e' sempre sbagliata, qualunque verbo segua; 0 falsi positivi su MENTE verificati. Trovato che la falsita' era gia' colata nel riflusso FATTI (fatti_dalle_storie_2026Q3.md, il file che alimenta il RAG): il tool ora lo copre. Batch 3 analizzato riga per riga e scomposto in 3 gruppi (10 sicuri, 4 da giudicare, 2 TRONCATI da rigenerare). Aggiunta la guardia anti-divergenza che non si fida delle scalette social (stantie: davano EP_SG_02_02 e EP_N2_04 non pubblicati mentre erano gia' pubblici) ma dell'artefatto carosello.
+- Sessione #74 (28/09): prima accensione con la catena d'avvio verificata - esito 0 per catena e push, critiche 300 -> 19
+- Sessione #74 (28/09): VULCAN pilastro in STATE, db GENESIS e dashboard (home, barra di stato, pitch verificati a schermo, tsc -b verde); FIT-PARK fuori dal db
+- Sessione #74 (28/09): tre distinte del ferro (V32, VULCAN, MIMS) in MENTE come fonte unica, trovabili dal RAG; martinetto Vevor da comprare, non adesso
 
 </details>
 
