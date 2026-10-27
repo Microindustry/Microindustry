@@ -28,7 +28,7 @@ Nessuna laurea. Solo proof-of-work reali.
 
 **TITANIUM_OS** è il sistema che costruisco mentre costruisce me. Ogni nodo elimina un carico mentale. Ogni automazione libera energia per il lavoro fisico.
 
-### Stato Live — v3.0.0 · +716 commit | Sessione #183 | 26 Oct 2026 09:02
+### Stato Live — v3.0.0 · +718 commit | Sessione #183 | 27 Oct 2026 09:22
 
 *Le barre sono metriche di gestione interna (STATE.json live), non misure fisiche:
 lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
@@ -66,7 +66,7 @@ lo stato reale della V32 oggi è un telaio in piedi + componentistica scelta.*
 
 | Nodo | Descrizione |
 |------|-------------|
-| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — ~24.260 chunk, si aggiorna da solo a ogni modifica |
+| `MENTE RAG v4.2` | ChromaDB hybrid BM25+semantico+CrossEncoder, chunking heading-aware + GraphRAG-lite — ~24.345 chunk, si aggiorna da solo a ogni modifica |
 | `Story Agent` | Milestone verificato → episodio narrativo (02:07 ogni notte) — il lavoro si documenta da solo |
 | `Nina Agent` | Il binario educativo: favole vere generate a 2 stadi con grounding RAG |
 | `Apprendista notturno` | Bozze di caroselli Instagram in quarantena (@04:15) — QC automatico + canon_guard, promozione solo umana di giorno |
