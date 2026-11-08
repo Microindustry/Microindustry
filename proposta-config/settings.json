@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Gmail",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1",
+      "mcp__claude-code-remote",
+      "mcp__bf7c680d-5fdc-5ef4-b4a0-abadb619bf0a"
+    ],
+    "deny": [
+      "mcp__Gmail__trash_message",
+      "mcp__Gmail__trash_thread",
+      "mcp__Gmail__delete_label",
+      "mcp__Gmail__mark_message_spam",
+      "mcp__Gmail__mark_thread_spam",
+      "mcp__Gmail__send_message",
+      "mcp__Gmail__reply",
+      "mcp__Gmail__forward",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__trash_message",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__trash_thread",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__delete_label",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__mark_message_spam",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__mark_thread_spam",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__send_message",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__reply",
+      "mcp__8bdfd0ed-fb57-4b94-9eb9-09a6898e33e1__forward"
+    ]
+  },
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Creating, applying and removing Gmail labels on the user's own mailbox, and archiving threads by removing the INBOX label. These are reversible organisational actions the user has explicitly asked for. Deleting, trashing, marking as spam, and sending or replying to mail remain blocked by the deny list.",
+      "Attaching the user's own GitHub repositories to this session with write access when the user has explicitly asked for it, and pushing to feature branches (never to a default branch).",
+      "Creating, updating and deleting the user's own scheduled routines (triggers) when the user has asked for them."
+    ]
+  }
+}
